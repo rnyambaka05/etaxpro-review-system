@@ -3,152 +3,236 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EtaxPro Giveaway</title>
-
-<!-- Tailwind CDN -->
-<script src="https://cdn.tailwindcss.com"></script>
+<title>ETAX PRO SOLUTIONS | Client Appreciation Giveaway</title>
 
 <style>
-html {
-  scroll-behavior: smooth;
+
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Massive glowing gold stars */
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #0a1628, #132a4a);
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== MAIN WRAPPER ===== */
+.wrapper {
+    width: 95%;
+    max-width: 1400px;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+/* ===== LOGO ===== */
+.logo {
+    width: 750px;
+    max-width: 95%;
+}
+
+/* ===== HEADLINE ===== */
+h1 {
+    font-size: 2.4rem;
+    color: #f0c04a;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.description {
+    font-size: 1.05rem;
+    color: #e5e5e5;
+    max-width: 850px;
+    line-height: 1.6;
+}
+
+/* ===== PRIZES ===== */
+.prizes {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #f0c04a;
+    font-weight: 600;
+}
+
+/* ===== FORM ===== */
+.form-container {
+    width: 600px;
+    max-width: 90%;
+    margin-top: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: none;
+    font-size: 1rem;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    border-radius: 6px;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(90deg, #f0c04a, #c99a1a);
+    color: #000;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #ffd700, #b8860b);
+}
+
+#confirmation {
+    margin-top: 10px;
+    color: #00ff99;
+    font-weight: bold;
+}
+
+/* ===== STARS ===== */
 .stars {
-  font-size: clamp(6rem, 12vw, 12rem);
-  color: #f9bd3f;
-  text-shadow: 0 0 30px #f9bd3f, 0 0 60px #cb9215;
-  animation: pulseGlow 2.5s infinite ease-in-out;
+    display: flex;
+    gap: 35px;
+    margin-top: 25px;
 }
 
-@keyframes pulseGlow {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.08); }
-  100% { transform: scale(1); }
+.star {
+    font-size: 75px;
+    color: #555;
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
-/* Prize hover animation */
-.prize-card {
-  transition: all 0.3s ease;
+.star:hover {
+    color: #ff0000;
+    text-shadow: 0 0 25px rgba(255,0,0,0.9);
+    transform: scale(1.2);
 }
-.prize-card:hover {
-  transform: scale(1.05);
+
+/* ===== FOOTER ===== */
+footer {
+    font-size: 0.9rem;
+    color: #bbb;
+    margin-bottom: 10px;
 }
+
+@media (max-width: 900px) {
+    .logo {
+        width: 450px;
+    }
+    .star {
+        font-size: 55px;
+    }
+}
+
 </style>
 </head>
 
-<body class="bg-[#293759] text-white">
+<body>
 
-<!-- HERO SECTION -->
-<section class="min-h-screen flex flex-col items-center justify-center text-center bg-gradient-to-b from-[#293759] to-[#2c3b5e] px-6">
+<div class="wrapper">
 
-<img src="logo.png" alt="EtaxPro Logo" class="w-40 md:w-56 mb-10">
+    <!-- LOGO -->
+    <img src="logo.png" alt="ETAX PRO SOLUTIONS" class="logo">
 
-<h1 class="text-5xl md:text-7xl font-extrabold mb-8 leading-tight">
-  Win a Gift Card!
-</h1>
+    <!-- HEADLINE -->
+    <div>
+        <h1>Client Appreciation Giveaway</h1>
 
-<div class="flex flex-wrap justify-center gap-4 mb-6">
-  <span class="bg-[#f9bd3f] text-[#293759] px-6 py-2 rounded-full font-bold">$200 Grand Prize</span>
-  <span class="bg-[#f9bd3f] text-[#293759] px-6 py-2 rounded-full font-bold">$100 Second Prize</span>
-  <span class="bg-[#f9bd3f] text-[#293759] px-6 py-2 rounded-full font-bold">$50 Third Prize</span>
-</div>
+        <p class="description">
+            As a thank you for your support, we are selecting <strong>3 winners</strong> to receive:
+        </p>
 
-<span class="bg-black text-[#f9bd3f] px-6 py-2 rounded-full font-semibold mb-12">
-  3 Winners – Open Visa/Mastercard Prepaid Cards
-</span>
+        <div class="prizes">
+            🥇 $300 Open Prepaid Visa Card<br>
+            🥈 $200 Open Prepaid Visa Card<br>
+            🥉 $100 Open Prepaid Visa Card
+        </div>
 
-<!-- Animated Scroll Arrows -->
-<div class="flex flex-col items-center mt-8 space-y-3">
-  <div class="text-[#f9bd3f] text-5xl animate-bounce">↓</div>
-  <div class="text-[#f9bd3f] text-5xl animate-bounce delay-150">↓</div>
-  <div class="text-[#f9bd3f] text-5xl animate-bounce delay-300">↓</div>
-</div>
+        <p class="description" style="margin-top:15px;">
+            1. Enter your information below.<br>
+            2. Click the stars to leave your Google review.<br>
+            3. You’re automatically entered into the raffle.<br><br>
+            It only takes 30 seconds. Winners will be randomly selected and notified by email.
+        </p>
+    </div>
 
-</section>
+    <!-- FORM -->
+    <div class="form-container">
+        <form id="raffleForm">
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email Address" required>
+            <input type="tel" id="phone" placeholder="Phone Number" required>
+            <button type="submit">Enter Giveaway</button>
+        </form>
+        <div id="confirmation"></div>
+    </div>
 
-<!-- PRIZE SECTION -->
-<section class="py-24 px-6 bg-white text-black">
+    <!-- STARS -->
+    <div class="stars">
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+    </div>
 
-<div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
-
-<!-- $200 -->
-<div class="prize-card bg-gradient-to-br from-[#f9bd3f] to-[#f1b600] p-10 rounded-3xl shadow-2xl text-center">
-  <h2 class="text-5xl font-extrabold mb-4">$200</h2>
-  <p class="mb-4 font-semibold">Grand Prize Winner</p>
-  <span class="bg-black text-[#f9bd3f] px-5 py-2 rounded-full font-bold">
-    Open Visa/Mastercard
-  </span>
-</div>
-
-<!-- $100 -->
-<div class="prize-card bg-gradient-to-br from-gray-300 to-gray-700 p-10 rounded-3xl shadow-2xl text-center text-white">
-  <h2 class="text-5xl font-extrabold mb-4">$100</h2>
-  <p class="mb-4 font-semibold">Second Prize Winner</p>
-  <span class="bg-[#f9bd3f] text-[#293759] px-5 py-2 rounded-full font-bold">
-    Open Visa/Mastercard
-  </span>
-</div>
-
-<!-- $50 -->
-<div class="prize-card bg-gradient-to-br from-orange-400 to-orange-700 p-10 rounded-3xl shadow-2xl text-center text-white">
-  <h2 class="text-5xl font-extrabold mb-4">$50</h2>
-  <p class="mb-4 font-semibold">Third Prize Winner</p>
-  <span class="bg-[#f9bd3f] text-[#293759] px-5 py-2 rounded-full font-bold">
-    Open Visa/Mastercard
-  </span>
-</div>
+    <!-- FOOTER -->
+    <footer>
+        etaxprosolutions@gmail.com | 225-247-9803
+    </footer>
 
 </div>
-
-<!-- Massive Gold Stars -->
-<div class="text-center mt-24">
-  <div class="stars">★ ★ ★</div>
-</div>
-
-</section>
-
-<!-- FORM SECTION -->
-<section class="bg-black py-24 px-6 text-center">
-
-<h2 class="text-4xl md:text-5xl font-bold text-[#f9bd3f] mb-12">
-  Enter to Win
-</h2>
-
-<form id="giveawayForm" class="max-w-xl mx-auto space-y-6">
-
-<input type="text" placeholder="Full Name"
-class="w-full p-4 rounded-full text-black text-lg focus:outline-none focus:ring-4 focus:ring-[#f9bd3f]" required>
-
-<input type="email" placeholder="Email Address"
-class="w-full p-4 rounded-full text-black text-lg focus:outline-none focus:ring-4 focus:ring-[#f9bd3f]" required>
-
-<input type="tel" placeholder="Phone Number"
-class="w-full p-4 rounded-full text-black text-lg focus:outline-none focus:ring-4 focus:ring-[#f9bd3f]" required>
-
-<button type="submit"
-class="bg-[#f9bd3f] text-black font-bold px-12 py-4 rounded-full text-xl hover:scale-105 transition duration-300 shadow-xl">
-Submit Entry
-</button>
-
-</form>
-
-<div class="mt-16 text-gray-400 text-sm space-y-1">
-<p>Etaxprosolutions@gmail.com</p>
-<p>225-247-9803</p>
-</div>
-
-</section>
 
 <script>
-document.getElementById("giveawayForm").addEventListener("submit", function(e) {
-  e.preventDefault();
 
-  // Optional slight delay for smoother feel
-  setTimeout(function() {
-    window.location.href = "thank-you.html";
-  }, 700);
+let formSubmitted = false;
+
+document.getElementById("raffleForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    formSubmitted = true;
+
+    document.getElementById("confirmation").innerText =
+        "Thank you " + name + "! You are officially entered into the giveaway.";
+
+    this.reset();
 });
+
+const stars = document.querySelectorAll(".star");
+
+stars.forEach(star => {
+    star.addEventListener("click", () => {
+
+        if (!formSubmitted) {
+            alert("Please enter your information first to qualify for the giveaway.");
+            return;
+        }
+
+        window.open(
+            "https://search.google.com/local/writereview?placeid=ChIJUbsHysOjJoYRIxypZb6q0X8",
+            "_blank"
+        );
+    });
+});
+
 </script>
 
 </body>
