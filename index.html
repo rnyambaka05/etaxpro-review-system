@@ -1,128 +1,168 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Review & Win | ETAX PRO SOLUTIONS</title>
-
-<link rel="stylesheet"
-href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ETAX PRO SOLUTIONS | Review & Win</title>
 
 <style>
-
-/* ===== BRAND COLORS FROM LOGO ===== */
-:root{
---navy-dark:#293759;
---navy-light:#2c3b5e;
---gold:#f9bd3f;
---gold-deep:#cb9215;
---silver:#cfcfcf;
---bronze:#b87333;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI,Arial,sans-serif
 }
 
-/* ===== PAGE SETUP ===== */
 body{
-background:linear-gradient(135deg,var(--navy-dark),var(--navy-light));
-color:#fff;
 height:100vh;
+background:linear-gradient(135deg,#1c2e4a,#293759);
+color:#fff;
+display:flex;
+justify-content:center;
+align-items:center;
 overflow:hidden;
 }
 
-.main-wrapper{
-height:100vh;
+.container{
+width:95%;
+max-width:1300px;
+height:95vh;
 display:flex;
 flex-direction:column;
 justify-content:space-between;
+align-items:center;
+text-align:center;
 }
 
-/* ===== HERO ===== */
+/* LOGO */
 .logo{
-width:420px;
-max-width:80%;
-margin:15px auto 5px auto;
-display:block;
+width:280px;
+margin-top:5px;
 }
 
+/* HEADER */
 h1{
-font-size:3rem;
+font-size:2.4rem;
+color:#f9bd3f;
 font-weight:800;
-color:var(--gold);
-margin-bottom:5px;
+letter-spacing:1px;
+margin-bottom:4px;
 }
 
-.subtext{
-font-size:1rem;
-color:#e5e5e5;
-margin-bottom:8px;
+.description{
+font-size:.95rem;
+color:#e8e8e8;
+max-width:700px;
+margin-bottom:6px;
+line-height:1.4;
 }
 
 .pill{
 display:inline-block;
-padding:6px 16px;
-border-radius:50px;
-background:var(--gold);
-color:var(--navy-dark);
+padding:6px 14px;
+border-radius:40px;
+background:#f9bd3f;
+color:#1c2e4a;
 font-weight:700;
-font-size:.85rem;
-margin-top:5px;
+font-size:.8rem;
+margin-top:4px;
 }
 
-/* ===== PRIZES ===== */
-.prize-card{
+/* PRIZES */
+.prize-section{
+display:flex;
+gap:15px;
+margin-top:6px;
+}
+
+.card{
 padding:12px;
 border-radius:10px;
-text-align:center;
+width:170px;
+box-shadow:0 8px 20px rgba(0,0,0,.35);
+transition:.3s ease;
 font-weight:700;
-box-shadow:0 8px 20px rgba(0,0,0,.4);
-transition:.3s;
 }
 
-.prize-card:hover{transform:scale(1.05)}
+.card:hover{transform:scale(1.05)}
 
-.gold{background:linear-gradient(145deg,var(--gold),var(--gold-deep));color:#000}
-.silver{background:linear-gradient(145deg,#eeeeee,#9e9e9e);color:#000}
-.bronze{background:linear-gradient(145deg,#cd7f32,#8c4a16)}
+.gold{
+background:linear-gradient(145deg,#ffd84d,#ffb700);
+color:#000;
+}
+.silver{
+background:linear-gradient(145deg,#ffffff,#cfcfcf);
+color:#000;
+}
+.bronze{
+background:linear-gradient(145deg,#ffb36b,#b87333);
+}
 
-.prize-card h3{margin:0;font-size:1.4rem}
+.card h2{
+font-size:1.5rem;
+margin-bottom:3px;
+}
 
-/* ===== FORM ===== */
-form input{
-height:38px;
-border-radius:6px;
-margin-bottom:6px;
+/* FORM */
+.form-section{
+width:450px;
+max-width:90%;
+margin-top:6px;
+}
+
+input{
+width:100%;
+padding:10px;
+margin:4px 0;
 border:none;
+border-radius:5px;
+font-size:.85rem;
 }
 
-form button{
-height:40px;
-border-radius:6px;
-background:linear-gradient(90deg,var(--gold),var(--gold-deep));
+button{
+width:100%;
+padding:10px;
+margin-top:4px;
+border:none;
+border-radius:5px;
+background:linear-gradient(90deg,#f9bd3f,#ffb700);
 color:#000;
 font-weight:700;
+cursor:pointer;
 transition:.3s;
 }
 
-form button:hover{transform:scale(1.03)}
+button:hover{transform:scale(1.03)}
 
 #message{
-font-size:.85rem;
+margin-top:4px;
 color:#00ff99;
-margin-top:3px;
+font-weight:bold;
+font-size:.8rem;
 }
 
-/* ===== REVIEW ===== */
-.review-title{
-color:var(--gold);
-font-weight:700;
-margin-bottom:5px;
+/* REVIEW SECTION */
+.review-section{
+margin-top:6px;
 }
 
+.review-section h3{
+font-size:1.1rem;
+color:#f9bd3f;
+margin-bottom:4px;
+}
+
+/* ARROWS */
 .arrows{
 display:flex;
+gap:20px;
 justify-content:center;
-gap:25px;
+margin-bottom:4px;
+}
+
+.arrow{
 font-size:1.8rem;
-color:var(--gold);
+color:#f9bd3f;
 animation:bounce 1.2s infinite;
 }
 
@@ -131,28 +171,27 @@ animation:bounce 1.2s infinite;
 50%{transform:translateY(6px)}
 }
 
+/* STARS */
 .stars{
 display:flex;
-justify-content:center;
 gap:18px;
-margin-top:5px;
+justify-content:center;
 }
 
 .star{
-font-size:55px;
+font-size:70px;
 color:#555;
 cursor:pointer;
 transition:.3s;
 }
 
-.star.active,
 .star.hovered{
-color:var(--gold);
-text-shadow:0 0 18px rgba(249,189,63,.9);
+color:#f9bd3f;
+text-shadow:0 0 20px rgba(249,189,63,.9);
 transform:scale(1.15);
 }
 
-/* ===== CONFETTI ===== */
+/* CONFETTI */
 .confetti{
 position:fixed;
 width:8px;
@@ -165,62 +204,62 @@ animation:fall 2s linear forwards;
 to{transform:translateY(100vh) rotate(720deg);opacity:0}
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer{
 font-size:.75rem;
-text-align:center;
 color:#ccc;
-margin-bottom:8px;
+margin-bottom:5px;
 }
-
 </style>
 </head>
 
 <body>
 
-<div class="main-wrapper">
+<div class="container">
 
-<div class="row text-center">
 <img src="logo.png" class="logo">
+
+<div>
 <h1>Review & Win</h1>
-<div class="subtext">
-Enter the giveaway below, then leave us a quick Google review to qualify.
-Winners will be randomly selected and notified by email.
-</div>
+<p class="description">
+Enter your information below, then leave us a quick Google review to be entered to win one of our prepaid Visa cards.
+Winners are selected randomly and notified by email.
+</p>
 <div class="pill">3 Winners: $200 • $100 • $50 — Open Visa/Mastercard Prepaid Cards</div>
 </div>
 
-<div class="row small-up-3 text-center" style="margin-top:8px;">
-<div class="column">
-<div class="prize-card gold"><h3>$200</h3>Grand Prize</div>
+<div class="prize-section">
+<div class="card gold">
+<h2>$200</h2>
+Grand Prize
 </div>
-<div class="column">
-<div class="prize-card silver"><h3>$100</h3>Second Prize</div>
+<div class="card silver">
+<h2>$100</h2>
+Second Prize
 </div>
-<div class="column">
-<div class="prize-card bronze"><h3>$50</h3>Third Prize</div>
+<div class="card bronze">
+<h2>$50</h2>
+Third Prize
 </div>
 </div>
 
-<div class="row text-center" style="margin-top:8px;">
-<div class="small-12 medium-6 medium-centered columns">
+<div class="form-section">
 <form id="giveawayForm">
 <input type="text" id="name" placeholder="Full Name" required>
 <input type="email" id="email" placeholder="Email Address" required>
 <input type="tel" id="phone" placeholder="Phone Number" required>
-<button type="submit" class="expanded button">Enter Giveaway</button>
+<button type="submit">Enter Giveaway</button>
 </form>
 <div id="message"></div>
 </div>
-</div>
 
-<div class="row text-center" style="margin-top:8px;">
-<div class="review-title">Leave Your Review Below</div>
+<div class="review-section">
+<h3>Leave Your Review Below</h3>
 
 <div class="arrows">
-<div>↓</div>
-<div>↓</div>
-<div>↓</div>
+<div class="arrow">↓</div>
+<div class="arrow">↓</div>
+<div class="arrow">↓</div>
 </div>
 
 <div class="stars">
@@ -239,13 +278,14 @@ etaxprosolutions@gmail.com | 225-247-9803
 </div>
 
 <script>
+
 let formSubmitted=false;
 
 document.getElementById("giveawayForm").addEventListener("submit",function(e){
 e.preventDefault();
 formSubmitted=true;
 document.getElementById("message").innerText=
-"You’re officially entered! Now click the stars to leave your review.";
+"You're officially entered! Now click the stars below to leave your review.";
 this.reset();
 });
 
@@ -253,45 +293,40 @@ const stars=document.querySelectorAll(".star");
 
 stars.forEach(star=>{
 star.addEventListener("mouseover",()=>{
-let val=star.dataset.value;
-highlight(val);
+let val=star.getAttribute("data-value");
+stars.forEach(s=>{
+if(s.getAttribute("data-value")<=val){
+s.classList.add("hovered");
+}
 });
-star.addEventListener("mouseout",reset);
+});
+star.addEventListener("mouseout",()=>{
+stars.forEach(s=>s.classList.remove("hovered"));
+});
 star.addEventListener("click",()=>{
 if(!formSubmitted){
 alert("Please enter the giveaway first.");
 return;
 }
-confetti();
+launchConfetti();
 setTimeout(()=>{
 window.location.href="https://search.google.com/local/writereview?placeid=ChIJUbsHysOjJoYRIxypZb6q0X8";
 },1200);
 });
 });
 
-function highlight(val){
-stars.forEach(s=>{
-if(s.dataset.value<=val){
-s.classList.add("hovered");
-}
-});
-}
-
-function reset(){
-stars.forEach(s=>s.classList.remove("hovered"));
-}
-
-function confetti(){
+function launchConfetti(){
 for(let i=0;i<80;i++){
-let c=document.createElement("div");
-c.className="confetti";
-c.style.left=Math.random()*100+"vw";
-c.style.background=`hsl(${Math.random()*360},100%,50%)`;
-c.style.animationDuration=(Math.random()*2+1)+"s";
-document.body.appendChild(c);
-setTimeout(()=>c.remove(),2000);
+let conf=document.createElement("div");
+conf.className="confetti";
+conf.style.left=Math.random()*100+"vw";
+conf.style.background=`hsl(${Math.random()*360},100%,50%)`;
+conf.style.animationDuration=(Math.random()*2+1)+"s";
+document.body.appendChild(conf);
+setTimeout(()=>conf.remove(),2000);
 }
 }
+
 </script>
 
 </body>
