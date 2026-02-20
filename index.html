@@ -3,212 +3,232 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ETAX PRO SOLUTIONS | Review & Win</title>
+<title>E Tax Pro Solutions | Client Appreciation Drawing</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Segoe UI,Arial,sans-serif
-}
+*{margin:0;padding:0;box-sizing:border-box}
 
 body{
-height:100vh;
-background:linear-gradient(135deg,#1c2e4a,#293759);
-color:#fff;
-display:flex;
-justify-content:center;
-align-items:center;
-overflow:hidden;
+background:#0E1A2B;
+color:#F8F6F1;
+font-family:'Inter',sans-serif;
+line-height:1.7;
 }
 
 .container{
-width:95%;
-max-width:1300px;
-height:95vh;
-display:flex;
-flex-direction:column;
-justify-content:space-between;
-align-items:center;
+max-width:1100px;
+margin:0 auto;
+padding:60px 20px;
+}
+
+section{
+margin-bottom:90px;
 text-align:center;
 }
 
-/* LOGO */
-.logo{
-width:280px;
-margin-top:5px;
+/* Typography */
+h1,h2,h3{
+font-family:'Playfair Display',serif;
+font-weight:600;
+letter-spacing:.5px;
 }
 
-/* HEADER */
 h1{
-font-size:2.4rem;
-color:#f9bd3f;
-font-weight:800;
+font-size:2.8rem;
+margin-bottom:20px;
+}
+
+h2{
+font-size:2rem;
+margin-bottom:40px;
+color:#C8A24D;
+}
+
+p{
+max-width:750px;
+margin:0 auto 20px;
+color:#E5E3DD;
+font-weight:300;
+}
+
+.gold-line{
+width:80px;
+height:1px;
+background:#C8A24D;
+margin:25px auto 35px auto;
+}
+
+/* Hero */
+.logo{
+width:200px;
+margin-bottom:25px;
+}
+
+.drawing-date{
+font-family:'Playfair Display',serif;
+font-size:1.1rem;
+color:#C8A24D;
+margin-top:15px;
 letter-spacing:1px;
-margin-bottom:4px;
 }
 
-.description{
-font-size:.95rem;
-color:#e8e8e8;
-max-width:700px;
-margin-bottom:6px;
-line-height:1.4;
-}
-
-.pill{
-display:inline-block;
-padding:6px 14px;
-border-radius:40px;
-background:#f9bd3f;
-color:#1c2e4a;
-font-weight:700;
-font-size:.8rem;
-margin-top:4px;
-}
-
-/* PRIZES */
-.prize-section{
+/* Award Cards */
+.awards{
 display:flex;
-gap:15px;
-margin-top:6px;
+gap:30px;
+justify-content:center;
+flex-wrap:wrap;
 }
 
-.card{
-padding:12px;
-border-radius:10px;
-width:170px;
-box-shadow:0 8px 20px rgba(0,0,0,.35);
+.award-card{
+background:#1F2937;
+border:1px solid #C8A24D;
+padding:40px 30px;
+width:280px;
+border-radius:6px;
+box-shadow:0 10px 30px rgba(0,0,0,.35);
 transition:.3s ease;
-font-weight:700;
 }
 
-.card:hover{transform:scale(1.05)}
-
-.gold{
-background:linear-gradient(145deg,#ffd84d,#ffb700);
-color:#000;
-}
-.silver{
-background:linear-gradient(145deg,#ffffff,#cfcfcf);
-color:#000;
-}
-.bronze{
-background:linear-gradient(145deg,#ffb36b,#b87333);
+.award-card:hover{
+transform:translateY(-5px);
+box-shadow:0 20px 40px rgba(0,0,0,.45);
 }
 
-.card h2{
-font-size:1.5rem;
-margin-bottom:3px;
+.award-card h3{
+font-size:1.6rem;
+margin-bottom:10px;
 }
 
-/* FORM */
-.form-section{
-width:450px;
-max-width:90%;
-margin-top:6px;
+.award-card p{
+margin:0;
+color:#C8A24D;
+font-weight:500;
+}
+
+/* How It Works */
+.steps{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:40px;
+margin-top:40px;
+}
+
+.step{
+padding:20px;
+}
+
+.step-icon{
+font-size:1.8rem;
+color:#C8A24D;
+margin-bottom:10px;
+}
+
+/* Form */
+form{
+max-width:600px;
+margin:40px auto 0 auto;
+text-align:left;
+}
+
+label{
+display:block;
+margin-bottom:6px;
+font-size:.9rem;
+color:#C8A24D;
 }
 
 input{
 width:100%;
-padding:10px;
-margin:4px 0;
-border:none;
-border-radius:5px;
-font-size:.85rem;
+padding:14px;
+margin-bottom:20px;
+background:#1F2937;
+border:1px solid #374151;
+border-radius:4px;
+color:#F8F6F1;
+font-size:1rem;
+}
+
+input:focus{
+outline:none;
+border:1px solid #C8A24D;
+box-shadow:0 0 0 1px #C8A24D;
 }
 
 button{
 width:100%;
-padding:10px;
-margin-top:4px;
+padding:15px;
+background:#C8A24D;
+color:#0E1A2B;
 border:none;
-border-radius:5px;
-background:linear-gradient(90deg,#f9bd3f,#ffb700);
-color:#000;
-font-weight:700;
+border-radius:4px;
+font-weight:600;
+font-size:1rem;
 cursor:pointer;
 transition:.3s;
 }
 
-button:hover{transform:scale(1.03)}
+button:hover{
+background:#b8913e;
+}
 
-#message{
-margin-top:4px;
-color:#00ff99;
-font-weight:bold;
+.security-note{
 font-size:.8rem;
-}
-
-/* REVIEW SECTION */
-.review-section{
-margin-top:6px;
-}
-
-.review-section h3{
-font-size:1.1rem;
-color:#f9bd3f;
-margin-bottom:4px;
-}
-
-/* ARROWS */
-.arrows{
+margin-top:15px;
+color:#BEBBB5;
 display:flex;
-gap:20px;
-justify-content:center;
-margin-bottom:4px;
+align-items:center;
+gap:8px;
 }
 
-.arrow{
-font-size:1.8rem;
-color:#f9bd3f;
-animation:bounce 1.2s infinite;
-}
-
-@keyframes bounce{
-0%,100%{transform:translateY(0)}
-50%{transform:translateY(6px)}
-}
-
-/* STARS */
-.stars{
-display:flex;
-gap:18px;
-justify-content:center;
-}
-
-.star{
-font-size:70px;
-color:#555;
-cursor:pointer;
+/* Review Section */
+.review-btn{
+display:inline-block;
+margin-top:30px;
+padding:14px 35px;
+border:1px solid #C8A24D;
+color:#C8A24D;
+text-decoration:none;
+border-radius:4px;
 transition:.3s;
 }
 
-.star.hovered{
-color:#f9bd3f;
-text-shadow:0 0 20px rgba(249,189,63,.9);
-transform:scale(1.15);
+.review-btn:hover{
+background:#C8A24D;
+color:#0E1A2B;
 }
 
-/* CONFETTI */
-.confetti{
-position:fixed;
-width:8px;
-height:8px;
-top:-10px;
-animation:fall 2s linear forwards;
+/* Trust Strip */
+.trust-strip{
+background:#1F2937;
+padding:35px 20px;
+display:flex;
+justify-content:center;
+gap:60px;
+flex-wrap:wrap;
+font-size:.95rem;
+border-top:1px solid #2d3748;
+border-bottom:1px solid #2d3748;
 }
 
-@keyframes fall{
-to{transform:translateY(100vh) rotate(720deg);opacity:0}
-}
-
-/* FOOTER */
+/* Footer */
 footer{
+text-align:center;
+padding:40px 20px 20px 20px;
+font-size:.85rem;
+color:#BEBBB5;
+}
+
+.disclaimer{
 font-size:.75rem;
-color:#ccc;
-margin-bottom:5px;
+margin-top:25px;
+max-width:900px;
+margin-left:auto;
+margin-right:auto;
+color:#8F8B83;
 }
 </style>
 </head>
@@ -217,117 +237,111 @@ margin-bottom:5px;
 
 <div class="container">
 
+<!-- HERO -->
+<section>
 <img src="logo.png" class="logo">
-
-<div>
-<h1>Review & Win</h1>
-<p class="description">
-Enter your information below, then leave us a quick Google review to be entered to win one of our prepaid Visa cards.
-Winners are selected randomly and notified by email.
+<div class="gold-line"></div>
+<h1>Client Appreciation Drawing</h1>
+<p>
+E Tax Pro Solutions is hosting a private client appreciation drawing for our valued clients. 
+Clients who submit their information and leave a Google review will be entered into a random drawing. 
+Winners will be selected at random and notified directly via email.
 </p>
-<div class="pill">3 Winners: $200 • $100 • $50 — Open Visa/Mastercard Prepaid Cards</div>
-</div>
+<div class="drawing-date">Winners Selected April 1</div>
+</section>
 
-<div class="prize-section">
-<div class="card gold">
-<h2>$200</h2>
-Grand Prize
+<!-- AWARDS -->
+<section>
+<h2>Appreciation Awards</h2>
+<div class="awards">
+<div class="award-card">
+<h3>$200 Award</h3>
+<p>Prepaid Visa or Mastercard</p>
 </div>
-<div class="card silver">
-<h2>$100</h2>
-Second Prize
+<div class="award-card">
+<h3>$100 Award</h3>
+<p>Prepaid Visa or Mastercard</p>
 </div>
-<div class="card bronze">
-<h2>$50</h2>
-Third Prize
+<div class="award-card">
+<h3>$50 Award</h3>
+<p>Prepaid Visa or Mastercard</p>
 </div>
 </div>
+</section>
 
-<div class="form-section">
-<form id="giveawayForm">
-<input type="text" id="name" placeholder="Full Name" required>
-<input type="email" id="email" placeholder="Email Address" required>
-<input type="tel" id="phone" placeholder="Phone Number" required>
-<button type="submit">Enter Giveaway</button>
+<!-- HOW IT WORKS -->
+<section>
+<h2>How It Works</h2>
+<div class="steps">
+<div class="step">
+<div class="step-icon">1</div>
+<p>Submit your information below.</p>
+</div>
+<div class="step">
+<div class="step-icon">2</div>
+<p>Leave a Google review.</p>
+</div>
+<div class="step">
+<div class="step-icon">3</div>
+<p>Winners selected at random.</p>
+</div>
+<div class="step">
+<div class="step-icon">4</div>
+<p>Notification sent via email.</p>
+</div>
+</div>
+</section>
+
+<!-- FORM -->
+<section>
+<h2>Secure Entry</h2>
+<form>
+<label>Full Name</label>
+<input type="text" required>
+
+<label>Email Address</label>
+<input type="email" required>
+
+<label>Phone Number</label>
+<input type="tel" required>
+
+<button type="submit">Confirm Entry</button>
+
+<div class="security-note">
+🔒 Client information is used solely for this drawing and will not be shared.
+</div>
 </form>
-<div id="message"></div>
+</section>
+
+<!-- REVIEW -->
+<section>
+<h2>Leave Your Google Review</h2>
+<p>Your feedback helps our firm continue serving the community with excellence.</p>
+<a href="https://search.google.com/local/writereview?placeid=ChIJUbsHysOjJoYRIxypZb6q0X8" 
+class="review-btn" target="_blank">
+Leave a Review on Google
+</a>
+</section>
+
 </div>
 
-<div class="review-section">
-<h3>Leave Your Review Below</h3>
-
-<div class="arrows">
-<div class="arrow">↓</div>
-<div class="arrow">↓</div>
-<div class="arrow">↓</div>
-</div>
-
-<div class="stars">
-<span class="star" data-value="1">&#9733;</span>
-<span class="star" data-value="2">&#9733;</span>
-<span class="star" data-value="3">&#9733;</span>
-<span class="star" data-value="4">&#9733;</span>
-<span class="star" data-value="5">&#9733;</span>
-</div>
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+<div>Licensed & Insured</div>
+<div>5-Star Rated on Google</div>
+<div>Serving Our Community Since 2015</div>
 </div>
 
 <footer>
-etaxprosolutions@gmail.com | 225-247-9803
-</footer>
-
+E Tax Pro Solutions<br>
+Email: etaxprosolutions@gmail.com<br>
+Phone: 225-247-9803<br><br>
+© 2026 E Tax Pro Solutions. All Rights Reserved.
+<div class="disclaimer">
+Participation is not contingent upon the content or rating of the review. 
+Winners are selected at random on April 1, 2026. No purchase necessary.
 </div>
-
-<script>
-
-let formSubmitted=false;
-
-document.getElementById("giveawayForm").addEventListener("submit",function(e){
-e.preventDefault();
-formSubmitted=true;
-document.getElementById("message").innerText=
-"You're officially entered! Now click the stars below to leave your review.";
-this.reset();
-});
-
-const stars=document.querySelectorAll(".star");
-
-stars.forEach(star=>{
-star.addEventListener("mouseover",()=>{
-let val=star.getAttribute("data-value");
-stars.forEach(s=>{
-if(s.getAttribute("data-value")<=val){
-s.classList.add("hovered");
-}
-});
-});
-star.addEventListener("mouseout",()=>{
-stars.forEach(s=>s.classList.remove("hovered"));
-});
-star.addEventListener("click",()=>{
-if(!formSubmitted){
-alert("Please enter the giveaway first.");
-return;
-}
-launchConfetti();
-setTimeout(()=>{
-window.location.href="https://search.google.com/local/writereview?placeid=ChIJUbsHysOjJoYRIxypZb6q0X8";
-},1200);
-});
-});
-
-function launchConfetti(){
-for(let i=0;i<80;i++){
-let conf=document.createElement("div");
-conf.className="confetti";
-conf.style.left=Math.random()*100+"vw";
-conf.style.background=`hsl(${Math.random()*360},100%,50%)`;
-conf.style.animationDuration=(Math.random()*2+1)+"s";
-document.body.appendChild(conf);
-setTimeout(()=>conf.remove(),2000);
-}
-}
-
-</script>
+</footer>
 
 </body>
 </html>
