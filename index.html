@@ -5,343 +5,266 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>E Tax Pro Solutions | Client Appreciation Drawing</title>
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --navy:#0b1020;
+  --navy2:#111a33;
+  --gold:#e2b13c;
+  --silver:#cfd6e4;
+  --bronze:#cd7f32;
+  --white:#f8f9fc;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
 
 body{
-background:#0E1A2B;
-color:#F8F6F1;
-font-family:'Inter',sans-serif;
-line-height:1.7;
+  font-family:'Inter',sans-serif;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(226,177,60,.15), transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(205,127,50,.15), transparent 40%),
+    var(--navy);
+  color:var(--white);
+  overflow:hidden;
 }
 
-.container{
-max-width:1100px;
-margin:0 auto;
-padding:60px 20px;
+/* MAIN FULL SCREEN WRAPPER */
+.wrapper{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  padding:30px 5vw;
 }
 
-section{
-margin-bottom:90px;
-text-align:center;
+/* HERO */
+.hero{
+  text-align:center;
 }
 
-/* Typography */
-h1,h2,h3{
-font-family:'Playfair Display',serif;
-font-weight:600;
-letter-spacing:.5px;
+.hero img{
+  height:150px;
+  margin-bottom:20px;
 }
 
-h1{
-font-size:2.8rem;
-margin-bottom:20px;
-}
-
-h2{
-font-size:2rem;
-margin-bottom:40px;
-color:#C8A24D;
-}
-
-p{
-max-width:750px;
-margin:0 auto 20px;
-color:#E5E3DD;
-font-weight:300;
-}
-
-.gold-line{
-width:80px;
-height:1px;
-background:#C8A24D;
-margin:25px auto 35px auto;
-}
-
-/* Hero */
-.logo{
-width:200px;
-margin-bottom:25px;
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:2.8rem;
+  margin-bottom:10px;
+  background:linear-gradient(to right,var(--gold),#fff,var(--gold));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
 .drawing-date{
-font-family:'Playfair Display',serif;
-font-size:1.1rem;
-color:#C8A24D;
-margin-top:15px;
-letter-spacing:1px;
+  display:inline-block;
+  margin-top:10px;
+  padding:8px 20px;
+  border-radius:30px;
+  background:linear-gradient(135deg,var(--gold),#b88a2a);
+  color:#000;
+  font-weight:700;
+  letter-spacing:1px;
+  box-shadow:0 5px 20px rgba(226,177,60,.4);
+  animation:pulse 2s infinite;
 }
 
-/* Award Cards */
-.awards{
-display:flex;
-gap:30px;
-justify-content:center;
-flex-wrap:wrap;
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(226,177,60,.5);}
+  70%{box-shadow:0 0 0 15px rgba(226,177,60,0);}
+  100%{box-shadow:0 0 0 0 rgba(226,177,60,0);}
 }
 
-.award-card{
-background:#1F2937;
-border:1px solid #C8A24D;
-padding:40px 30px;
-width:280px;
-border-radius:6px;
-box-shadow:0 10px 30px rgba(0,0,0,.35);
-transition:.3s ease;
+/* PRIZE CARDS */
+.prizes{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  margin:30px 0;
 }
 
-.award-card:hover{
-transform:translateY(-5px);
-box-shadow:0 20px 40px rgba(0,0,0,.45);
+.card{
+  width:200px;
+  padding:20px;
+  border-radius:20px;
+  text-align:center;
+  backdrop-filter:blur(10px);
+  box-shadow:0 10px 30px rgba(0,0,0,.4);
+  transition:.3s;
 }
 
-.award-card h3{
-font-size:1.6rem;
-margin-bottom:10px;
+.card:hover{
+  transform:translateY(-8px);
 }
 
-.award-card p{
-margin:0;
-color:#C8A24D;
-font-weight:500;
+.gold{
+  background:linear-gradient(145deg,#3a2d08,var(--gold));
+  border:2px solid var(--gold);
 }
 
-/* How It Works */
-.steps{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:40px;
-margin-top:40px;
+.silver{
+  background:linear-gradient(145deg,#2c3240,var(--silver));
+  border:2px solid var(--silver);
 }
 
-.step{
-padding:20px;
+.bronze{
+  background:linear-gradient(145deg,#3a2214,var(--bronze));
+  border:2px solid var(--bronze);
 }
 
-.step-icon{
-font-size:1.8rem;
-color:#C8A24D;
-margin-bottom:10px;
+.card h2{
+  font-family:'Playfair Display',serif;
+  font-size:1.8rem;
 }
 
-/* Form */
+/* FORM */
+.form-section{
+  text-align:center;
+}
+
 form{
-max-width:600px;
-margin:40px auto 0 auto;
-text-align:left;
-}
-
-label{
-display:block;
-margin-bottom:6px;
-font-size:.9rem;
-color:#C8A24D;
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:15px;
 }
 
 input{
-width:100%;
-padding:14px;
-margin-bottom:20px;
-background:#1F2937;
-border:1px solid #374151;
-border-radius:4px;
-color:#F8F6F1;
-font-size:1rem;
-}
-
-input:focus{
-outline:none;
-border:1px solid #C8A24D;
-box-shadow:0 0 0 1px #C8A24D;
+  padding:12px;
+  border-radius:8px;
+  border:none;
+  width:200px;
 }
 
 button{
-width:100%;
-padding:15px;
-background:#C8A24D;
-color:#0E1A2B;
-border:none;
-border-radius:4px;
-font-weight:600;
-font-size:1rem;
-cursor:pointer;
-transition:.3s;
+  padding:12px 20px;
+  border-radius:8px;
+  border:none;
+  font-weight:600;
+  cursor:pointer;
 }
 
-button:hover{
-background:#b8913e;
+.submit-btn{
+  background:var(--gold);
+  color:#000;
 }
 
-.security-note{
-font-size:.8rem;
-margin-top:15px;
-color:#BEBBB5;
-display:flex;
-align-items:center;
-gap:8px;
+.submit-btn:hover{
+  background:#f0c85d;
 }
 
-/* Review Section */
+#entryMessage{
+  margin-top:10px;
+  color:var(--gold);
+  font-weight:600;
+}
+
+/* REVIEW SECTION */
+.review{
+  text-align:center;
+}
+
+.arrows{
+  font-size:40px;
+  animation:bounce 1.5s infinite;
+}
+
+@keyframes bounce{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(10px)}
+}
+
 .review-btn{
-display:inline-block;
-margin-top:30px;
-padding:14px 35px;
-border:1px solid #C8A24D;
-color:#C8A24D;
-text-decoration:none;
-border-radius:4px;
-transition:.3s;
+  margin-top:15px;
+  background:transparent;
+  border:2px solid var(--gold);
+  color:var(--gold);
+  font-size:1rem;
+  padding:12px 25px;
+  border-radius:30px;
+  transition:.3s;
 }
 
 .review-btn:hover{
-background:#C8A24D;
-color:#0E1A2B;
+  background:var(--gold);
+  color:#000;
 }
 
-/* Trust Strip */
-.trust-strip{
-background:#1F2937;
-padding:35px 20px;
-display:flex;
-justify-content:center;
-gap:60px;
-flex-wrap:wrap;
-font-size:.95rem;
-border-top:1px solid #2d3748;
-border-bottom:1px solid #2d3748;
-}
-
-/* Footer */
 footer{
-text-align:center;
-padding:40px 20px 20px 20px;
-font-size:.85rem;
-color:#BEBBB5;
-}
-
-.disclaimer{
-font-size:.75rem;
-margin-top:25px;
-max-width:900px;
-margin-left:auto;
-margin-right:auto;
-color:#8F8B83;
+  text-align:center;
+  font-size:.8rem;
+  opacity:.7;
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="wrapper">
 
-<!-- HERO -->
-<section>
-<img src="logo.png" class="logo">
-<div class="gold-line"></div>
-<h1>Client Appreciation Drawing</h1>
-<p>
-E Tax Pro Solutions is hosting a private client appreciation drawing for our valued clients. 
-Clients who submit their information and leave a Google review will be entered into a random drawing. 
-Winners will be selected at random and notified directly via email.
-</p>
-<div class="drawing-date">Winners Selected April 1</div>
-</section>
+  <div class="hero">
+    <img src="./assets/logo.png" alt="E Tax Pro Solutions Logo">
+    <h1>Client Appreciation Drawing</h1>
+    <div class="drawing-date">Winners Selected April 1, 2026</div>
+  </div>
 
-<!-- AWARDS -->
-<section>
-<h2>Appreciation Awards</h2>
-<div class="awards">
-<div class="award-card">
-<h3>$200 Award</h3>
-<p>Prepaid Visa or Mastercard</p>
-</div>
-<div class="award-card">
-<h3>$100 Award</h3>
-<p>Prepaid Visa or Mastercard</p>
-</div>
-<div class="award-card">
-<h3>$50 Award</h3>
-<p>Prepaid Visa or Mastercard</p>
-</div>
-</div>
-</section>
+  <div class="prizes">
+    <div class="card gold">
+      <h2>$200</h2>
+      <p>Prepaid Visa/Mastercard</p>
+    </div>
+    <div class="card silver">
+      <h2>$100</h2>
+      <p>Prepaid Visa/Mastercard</p>
+    </div>
+    <div class="card bronze">
+      <h2>$50</h2>
+      <p>Prepaid Visa/Mastercard</p>
+    </div>
+  </div>
 
-<!-- HOW IT WORKS -->
-<section>
-<h2>How It Works</h2>
-<div class="steps">
-<div class="step">
-<div class="step-icon">1</div>
-<p>Submit your information below.</p>
-</div>
-<div class="step">
-<div class="step-icon">2</div>
-<p>Leave a Google review.</p>
-</div>
-<div class="step">
-<div class="step-icon">3</div>
-<p>Winners selected at random.</p>
-</div>
-<div class="step">
-<div class="step-icon">4</div>
-<p>Notification sent via email.</p>
-</div>
-</div>
-</section>
+  <div class="form-section">
+    <h3>Enter the Drawing</h3>
+    <form id="entryForm">
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <button type="submit" class="submit-btn">Submit Entry</button>
+    </form>
+    <div id="entryMessage"></div>
+  </div>
 
-<!-- FORM -->
-<section>
-<h2>Secure Entry</h2>
-<form>
-<label>Full Name</label>
-<input type="text" required>
+  <div class="review">
+    <h3>Leave Your Review Below</h3>
+    <div class="arrows">⬇️ ⬇️ ⬇️</div>
+    <button class="review-btn" onclick="leaveReview()">Leave a Review on Google</button>
+  </div>
 
-<label>Email Address</label>
-<input type="email" required>
-
-<label>Phone Number</label>
-<input type="tel" required>
-
-<button type="submit">Confirm Entry</button>
-
-<div class="security-note">
-🔒 Client information is used solely for this drawing and will not be shared.
-</div>
-</form>
-</section>
-
-<!-- REVIEW -->
-<section>
-<h2>Leave Your Google Review</h2>
-<p>Your feedback helps our firm continue serving the community with excellence.</p>
-<a href="https://search.google.com/local/writereview?placeid=ChIJUbsHysOjJoYRIxypZb6q0X8" 
-class="review-btn" target="_blank">
-Leave a Review on Google
-</a>
-</section>
+  <footer>
+    © 2026 E Tax Pro Solutions | etaxprosolutions@gmail.com | 225-247-9803
+  </footer>
 
 </div>
 
-<!-- TRUST STRIP -->
-<div class="trust-strip">
-<div>Licensed & Insured</div>
-<div>5-Star Rated on Google</div>
-<div>Serving Our Community Since 2015</div>
-</div>
+<script>
+let entered = false;
 
-<footer>
-E Tax Pro Solutions<br>
-Email: etaxprosolutions@gmail.com<br>
-Phone: 225-247-9803<br><br>
-© 2026 E Tax Pro Solutions. All Rights Reserved.
-<div class="disclaimer">
-Participation is not contingent upon the content or rating of the review. 
-Winners are selected at random on April 1, 2026. No purchase necessary.
-</div>
-</footer>
+document.getElementById('entryForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  entered = true;
+  document.getElementById('entryMessage').innerText = "You're officially entered! 🎉";
+});
+
+function leaveReview(){
+  if(!entered){
+    alert("Please submit your entry before leaving a review.");
+    return;
+  }
+  window.location.href="https://g.page/r/YOUR-GOOGLE-REVIEW-LINK";
+}
+</script>
 
 </body>
 </html>
