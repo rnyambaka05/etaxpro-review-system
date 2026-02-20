@@ -1,89 +1,104 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Win a Gift Card!</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Win a Gift Card!</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
+  <!-- Foundation CSS -->
+  <link rel="stylesheet"
+    href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
 
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- HERO -->
 <section class="hero">
+  <div class="grid-container text-center">
+    <h1>Win a Gift Card!</h1>
 
-<img src="assets/logo.png" class="logo" alt="E Tax Pro Solutions">
+    <p class="subtitle">
+      3 Winners: $200, $100, $50 –
+    </p>
 
-<h1>Win a Gift Card!</h1>
+    <div class="pill">
+      Open Visa/Mastercard Prepaid Cards
+    </div>
 
-<p class="subtitle">
-3 Winners: $200, $100, $50
-</p>
-
-<div class="pill">
-Open Visa/Mastercard Prepaid Cards
-</div>
-
+    <div class="down-arrows">
+      <a href="#stars">&#8595;</a>
+      <a href="#stars">&#8595;</a>
+      <a href="#stars">&#8595;</a>
+    </div>
+  </div>
 </section>
 
-<section class="prizes">
+<!-- PRIZE SECTION -->
+<section class="prizes" id="stars">
+  <div class="grid-container">
 
-<div class="prize-card">
-<h2>$200</h2>
-<p>Grand Prize Winner</p>
-</div>
+    <div class="grid-x grid-margin-x text-center">
 
-<div class="prize-card">
-<h2>$100</h2>
-<p>Second Place Winner</p>
-</div>
+      <div class="cell medium-4">
+        <div class="prize-card gold">
+          <h2>$200</h2>
+          <p>Grand Prize Winner</p>
+          <span class="card-pill">Open Visa/Mastercard</span>
+        </div>
+      </div>
 
-<div class="prize-card">
-<h2>$50</h2>
-<p>Third Place Winner</p>
-</div>
+      <div class="cell medium-4">
+        <div class="prize-card silver">
+          <h2>$100</h2>
+          <p>Second Place Winner</p>
+          <span class="card-pill">Open Visa/Mastercard</span>
+        </div>
+      </div>
 
+      <div class="cell medium-4">
+        <div class="prize-card bronze">
+          <h2>$50</h2>
+          <p>Third Place Winner</p>
+          <span class="card-pill">Open Visa/Mastercard</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- MASSIVE STARS -->
+    <div class="massive-stars">
+      ★ ★ ★
+    </div>
+
+  </div>
 </section>
 
-<section class="entry">
+<!-- FORM SECTION -->
+<section class="form-section">
+  <div class="grid-container text-center">
+    <h2>Enter To Win</h2>
 
-<h2>Enter the Giveaway</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <button type="submit">Enter Giveaway</button>
+    </form>
 
-<form id="raffleForm">
-<input type="text" id="name" placeholder="Full Name" required>
-<input type="email" id="email" placeholder="Email Address" required>
-<input type="tel" id="phone" placeholder="Phone Number" required>
-<button type="submit">Submit Entry</button>
-</form>
+    <div class="contact">
+      <p>Etaxprosolutions@gmail.com</p>
+      <p>225-247-9803</p>
+    </div>
 
-<p class="contact">
-Etaxprosolutions@gmail.com | 225-247-9803
-</p>
-
+  </div>
 </section>
 
-<section class="review">
-
-<h2>Leave Your Review Below</h2>
-
-<div class="arrows">
-<div>⬇</div>
-<div>⬇</div>
-<div>⬇</div>
-</div>
-
-<div class="stars" id="starContainer">
-<span data-value="1">★</span>
-<span data-value="2">★</span>
-<span data-value="3">★</span>
-<span data-value="4">★</span>
-<span data-value="5">★</span>
-</div>
-
-</section>
-
-<script src="js/script.js"></script>
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>

@@ -1,163 +1,122 @@
 body {
-margin: 0;
-background: #111827;
-font-family: 'Inter', sans-serif;
-color: white;
-text-align: center;
+  font-family: 'Helvetica Neue', sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
 }
 
 /* HERO */
 .hero {
-padding: 100px 20px 80px;
-background: linear-gradient(135deg, #293759, #111827);
-}
-
-.logo {
-width: 220px;
-margin-bottom: 40px;
+  padding: 140px 20px;
 }
 
 .hero h1 {
-font-family: 'Playfair Display', serif;
-font-size: 72px;
-color: #f9bd3f;
-margin: 0;
-letter-spacing: 2px;
+  font-size: 4.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
 }
 
 .subtitle {
-font-size: 36px;
-margin-top: 20px;
-color: white;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
 .pill {
-margin-top: 30px;
-display: inline-block;
-padding: 15px 35px;
-background: #f9bd3f;
-color: #111827;
-border-radius: 50px;
-font-weight: 600;
+  display: inline-block;
+  background: gold;
+  color: black;
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.down-arrows a {
+  font-size: 3rem;
+  color: gold;
+  margin: 0 10px;
+  text-decoration: none;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(15px); }
 }
 
 /* PRIZES */
 .prizes {
-display: flex;
-justify-content: center;
-gap: 40px;
-padding: 80px 20px;
-background: #1f2937;
-flex-wrap: wrap;
+  background: white;
+  color: #111;
+  padding: 100px 20px;
 }
 
 .prize-card {
-background: #293759;
-padding: 50px 40px;
-border-radius: 20px;
-width: 220px;
-box-shadow: 0 15px 35px rgba(0,0,0,0.4);
-transition: transform 0.3s ease;
+  padding: 40px;
+  border-radius: 20px;
+  color: white;
+  margin-bottom: 30px;
+  transition: 0.3s ease;
 }
 
 .prize-card:hover {
-transform: translateY(-10px);
+  transform: translateY(-10px);
 }
 
-.prize-card h2 {
-font-size: 48px;
-color: #f9bd3f;
-margin: 0;
+.gold { background: linear-gradient(135deg, #f7971e, #ffd200); }
+.silver { background: linear-gradient(135deg, #bdc3c7, #2c3e50); }
+.bronze { background: linear-gradient(135deg, #b06f2b, #eacda3); }
+
+.card-pill {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 6px 18px;
+  border-radius: 50px;
+  background: black;
+  color: white;
+  font-size: 0.8rem;
 }
 
-.prize-card p {
-margin-top: 15px;
-font-size: 18px;
+.massive-stars {
+  font-size: 10rem;
+  color: gold;
+  margin-top: 60px;
+  text-align: center;
 }
 
-/* ENTRY */
-.entry {
-padding: 80px 20px;
-background: #111827;
+/* FORM */
+.form-section {
+  padding: 100px 20px;
+  background: #111;
 }
 
-.entry h2 {
-font-family: 'Playfair Display', serif;
-font-size: 42px;
-color: #f9bd3f;
-margin-bottom: 40px;
+.form-section input {
+  width: 100%;
+  max-width: 400px;
+  margin: 10px auto;
+  padding: 15px;
+  border-radius: 50px;
+  border: none;
+  display: block;
 }
 
-form input {
-display: block;
-margin: 20px auto;
-padding: 20px;
-width: 320px;
-font-size: 18px;
-border-radius: 8px;
-border: none;
+.form-section button {
+  background: gold;
+  color: black;
+  font-weight: bold;
+  padding: 15px 40px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: 0.3s;
 }
 
-form button {
-margin-top: 20px;
-padding: 18px 40px;
-font-size: 18px;
-background: #f9bd3f;
-color: #111827;
-border: none;
-border-radius: 8px;
-cursor: pointer;
-font-weight: 600;
-transition: 0.3s ease;
-}
-
-form button:hover {
-background: white;
+.form-section button:hover {
+  background: white;
 }
 
 .contact {
-margin-top: 40px;
-font-size: 16px;
-opacity: 0.8;
-}
-
-/* REVIEW SECTION */
-.review {
-padding: 120px 20px;
-background: linear-gradient(135deg, #000000, #293759);
-}
-
-.review h2 {
-font-family: 'Playfair Display', serif;
-font-size: 48px;
-margin-bottom: 30px;
-}
-
-.arrows {
-font-size: 60px;
-color: #f9bd3f;
-display: flex;
-justify-content: center;
-gap: 30px;
-margin-bottom: 40px;
-animation: bounce 1.5s infinite;
-}
-
-@keyframes bounce {
-0%, 100% { transform: translateY(0); }
-50% { transform: translateY(12px); }
-}
-
-.stars span {
-font-size: 220px;
-margin: 0 20px;
-cursor: pointer;
-color: #444;
-transition: 0.3s ease;
-}
-
-.stars span:hover {
-color: #f9bd3f;
-transform: scale(1.15);
-text-shadow: 0 0 30px #f9bd3f;
+  margin-top: 40px;
+  opacity: 0.8;
 }
