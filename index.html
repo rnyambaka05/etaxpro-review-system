@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Win a Gift Card!</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Logo -->
+    <img src="assets/logo.png" alt="Your Logo" class="logo">
+
+    <!-- Headline -->
+    <header>
+      <h1>Win a Gift Card!</h1>
+      <p>3 Winners: $200, $100, $50 – Open Visa/Mastercard Prepaid Cards</p>
+      <p class="instruction">Submit your info first, then click a star to leave your review.</p>
+    </header>
+
+    <!-- Raffle Entry Form -->
+    <form id="raffleForm">
+      <h2>Enter the Raffle</h2>
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <button type="submit">Submit</button>
+      <p class="privacy">Your email will only be used for the giveaway. Winners will be notified via email.</p>
+    </form>
+
+    <!-- Interactive Stars -->
+    <div class="stars" id="starContainer">
+      <span data-value="1">&#9733;</span>
+      <span data-value="2">&#9733;</span>
+      <span data-value="3">&#9733;</span>
+      <span data-value="4">&#9733;</span>
+      <span data-value="5">&#9733;</span>
+    </div>
+
+    <!-- Confirmation -->
+    <div id="confirmation" class="hidden">
+      <h2>Thank you!</h2>
+      <p id="userName"></p>
+      <p>You are now entered into the giveaway. Click a star above to leave your Google review and complete your entry.</p>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
