@@ -1,70 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EtaxPro Giveaway</title>
-  <!-- Tailwind CSS CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.3/dist/tailwind.min.css" rel="stylesheet">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EtaxPro Giveaway</title>
+
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+html {
+  scroll-behavior: smooth;
+}
+
+/* Massive glowing gold stars */
+.stars {
+  font-size: clamp(6rem, 12vw, 12rem);
+  color: #f9bd3f;
+  text-shadow: 0 0 30px #f9bd3f, 0 0 60px #cb9215;
+  animation: pulseGlow 2.5s infinite ease-in-out;
+}
+
+@keyframes pulseGlow {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+/* Prize hover animation */
+.prize-card {
+  transition: all 0.3s ease;
+}
+.prize-card:hover {
+  transform: scale(1.05);
+}
+</style>
 </head>
-<body class="font-sans bg-white text-gray-900">
 
-  <!-- Hero Section -->
-  <header class="bg-gradient-to-b from-[#293759] to-[#2c3b5e] text-white text-center py-20">
-    <img src="logo.png" alt="EtaxPro Logo" class="mx-auto w-40 mb-8">
-    <h1 class="text-5xl md:text-6xl font-extrabold mb-4">Win a Gift Card!</h1>
-    <div class="flex justify-center gap-4 text-xl mb-10 flex-wrap">
-      <span class="bg-[#f9bd3f] text-[#293759] rounded-full px-4 py-1">$200</span>
-      <span class="bg-[#f9bd3f] text-[#293759] rounded-full px-4 py-1">$100</span>
-      <span class="bg-[#f9bd3f] text-[#293759] rounded-full px-4 py-1">$50</span>
-    </div>
-    <div class="animate-bounce text-5xl text-[#f9bd3f]">↓ ↓ ↓</div>
-  </header>
+<body class="bg-[#293759] text-white">
 
-  <!-- Prize Section -->
-  <section class="flex flex-wrap justify-center gap-8 py-20 px-4 bg-gray-100">
-    <!-- Grand Prize -->
-    <div class="bg-gradient-to-br from-yellow-400 to-yellow-500 text-white rounded-xl shadow-xl p-10 w-72 hover:scale-105 transition-transform">
-      <div class="text-3xl font-bold mb-2">$200</div>
-      <div class="mb-2">Grand Prize</div>
-      <span class="bg-black text-yellow-400 rounded-full px-3 py-1 text-sm">Open Visa/Mastercard</span>
-    </div>
-    <!-- Second Prize -->
-    <div class="bg-gradient-to-br from-gray-400 to-gray-600 text-white rounded-xl shadow-xl p-10 w-72 hover:scale-105 transition-transform">
-      <div class="text-3xl font-bold mb-2">$100</div>
-      <div class="mb-2">Second Prize</div>
-      <span class="bg-black text-yellow-400 rounded-full px-3 py-1 text-sm">Open Visa/Mastercard</span>
-    </div>
-    <!-- Third Prize -->
-    <div class="bg-gradient-to-br from-orange-400 to-orange-600 text-white rounded-xl shadow-xl p-10 w-72 hover:scale-105 transition-transform">
-      <div class="text-3xl font-bold mb-2">$50</div>
-      <div class="mb-2">Third Prize</div>
-      <span class="bg-black text-yellow-400 rounded-full px-3 py-1 text-sm">Open Visa/Mastercard</span>
-    </div>
-  </section>
+<!-- HERO SECTION -->
+<section class="min-h-screen flex flex-col items-center justify-center text-center bg-gradient-to-b from-[#293759] to-[#2c3b5e] px-6">
 
-  <!-- Gold Stars Section -->
-  <section class="text-center py-16">
-    <div class="text-[#f9bd3f] text-[8rem] font-extrabold drop-shadow-lg animate-pulse">
-      ★ ★ ★
-    </div>
-  </section>
+<img src="logo.png" alt="EtaxPro Logo" class="w-40 md:w-56 mb-10">
 
-  <!-- Form Section -->
-  <section class="bg-black text-white text-center py-20 px-4">
-    <h2 class="text-3xl font-bold mb-6">Enter Your Giveaway</h2>
-    <form id="giveawayForm" class="flex flex-col items-center gap-4 max-w-md mx-auto">
-      <input type="text" placeholder="Full Name" class="rounded-full px-6 py-3 w-full text-black" required>
-      <input type="email" placeholder="Email Address" class="rounded-full px-6 py-3 w-full text-black" required>
-      <input type="tel" placeholder="Phone Number" class="rounded-full px-6 py-3 w-full text-black" required>
-      <button type="submit" class="bg-[#f9bd3f] text-[#293759] rounded-full px-8 py-3 font-bold text-xl hover:scale-105 transition-transform">Submit</button>
-    </form>
-    <p class="mt-8 text-gray-400">Contact: Etaxprosolutions@gmail.com | 225-247-9803</p>
-  </section>
+<h1 class="text-5xl md:text-7xl font-extrabold mb-8 leading-tight">
+  Win a Gift Card!
+</h1>
 
-  <!-- Custom JS -->
-  <script src="script.js"></script>
+<div class="flex flex-wrap justify-center gap-4 mb-6">
+  <span class="bg-[#f9bd3f] text-[#293759] px-6 py-2 rounded-full font-bold">$200 Grand Prize</span>
+  <span class="bg-[#f9bd3f] text-[#293759] px-6 py-2 rounded-full font-bold">$100 Second Prize</span>
+  <span class="bg-[#f9bd3f] text-[#293759] px-6 py-2 rounded-full font-bold">$50 Third Prize</span>
+</div>
+
+<span class="bg-black text-[#f9bd3f] px-6 py-2 rounded-full font-semibold mb-12">
+  3 Winners – Open Visa/Mastercard Prepaid Cards
+</span>
+
+<!-- Animated Scroll Arrows -->
+<div class="flex flex-col items-center mt-8 space-y-3">
+  <div class="text-[#f9bd3f] text-5xl animate-bounce">↓</div>
+  <div class="text-[#f9bd3f] text-5xl animate-bounce delay-150">↓</div>
+  <div class="text-[#f9bd3f] text-5xl animate-bounce delay-300">↓</div>
+</div>
+
+</section>
+
+<!-- PRIZE SECTION -->
+<section class="py-24 px-6 bg-white text-black">
+
+<div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
+
+<!-- $200 -->
+<div class="prize-card bg-gradient-to-br from-[#f9bd3f] to-[#f1b600] p-10 rounded-3xl shadow-2xl text-center">
+  <h2 class="text-5xl font-extrabold mb-4">$200</h2>
+  <p class="mb-4 font-semibold">Grand Prize Winner</p>
+  <span class="bg-black text-[#f9bd3f] px-5 py-2 rounded-full font-bold">
+    Open Visa/Mastercard
+  </span>
+</div>
+
+<!-- $100 -->
+<div class="prize-card bg-gradient-to-br from-gray-300 to-gray-700 p-10 rounded-3xl shadow-2xl text-center text-white">
+  <h2 class="text-5xl font-extrabold mb-4">$100</h2>
+  <p class="mb-4 font-semibold">Second Prize Winner</p>
+  <span class="bg-[#f9bd3f] text-[#293759] px-5 py-2 rounded-full font-bold">
+    Open Visa/Mastercard
+  </span>
+</div>
+
+<!-- $50 -->
+<div class="prize-card bg-gradient-to-br from-orange-400 to-orange-700 p-10 rounded-3xl shadow-2xl text-center text-white">
+  <h2 class="text-5xl font-extrabold mb-4">$50</h2>
+  <p class="mb-4 font-semibold">Third Prize Winner</p>
+  <span class="bg-[#f9bd3f] text-[#293759] px-5 py-2 rounded-full font-bold">
+    Open Visa/Mastercard
+  </span>
+</div>
+
+</div>
+
+<!-- Massive Gold Stars -->
+<div class="text-center mt-24">
+  <div class="stars">★ ★ ★</div>
+</div>
+
+</section>
+
+<!-- FORM SECTION -->
+<section class="bg-black py-24 px-6 text-center">
+
+<h2 class="text-4xl md:text-5xl font-bold text-[#f9bd3f] mb-12">
+  Enter to Win
+</h2>
+
+<form id="giveawayForm" class="max-w-xl mx-auto space-y-6">
+
+<input type="text" placeholder="Full Name"
+class="w-full p-4 rounded-full text-black text-lg focus:outline-none focus:ring-4 focus:ring-[#f9bd3f]" required>
+
+<input type="email" placeholder="Email Address"
+class="w-full p-4 rounded-full text-black text-lg focus:outline-none focus:ring-4 focus:ring-[#f9bd3f]" required>
+
+<input type="tel" placeholder="Phone Number"
+class="w-full p-4 rounded-full text-black text-lg focus:outline-none focus:ring-4 focus:ring-[#f9bd3f]" required>
+
+<button type="submit"
+class="bg-[#f9bd3f] text-black font-bold px-12 py-4 rounded-full text-xl hover:scale-105 transition duration-300 shadow-xl">
+Submit Entry
+</button>
+
+</form>
+
+<div class="mt-16 text-gray-400 text-sm space-y-1">
+<p>Etaxprosolutions@gmail.com</p>
+<p>225-247-9803</p>
+</div>
+
+</section>
+
+<script>
+document.getElementById("giveawayForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  // Optional slight delay for smoother feel
+  setTimeout(function() {
+    window.location.href = "thank-you.html";
+  }, 700);
+});
+</script>
+
 </body>
 </html>
