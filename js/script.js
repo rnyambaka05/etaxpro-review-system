@@ -46,9 +46,10 @@ form.addEventListener('submit', function(e) {
   e.preventDefault();
   const nameInput = document.getElementById('name');
   const emailInput = document.getElementById('email');
+  const phoneInput = document.getElementById('phone');
 
-  if (nameInput.value.trim() === "" || emailInput.value.trim() === "") {
-    alert("Please fill out both name and email.");
+  if (nameInput.value.trim() === "" || emailInput.value.trim() === "" || phoneInput.value.trim() === "") {
+    alert("Please fill out all fields.");
     return;
   }
 

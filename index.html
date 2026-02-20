@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Win a Gift Card!</title>
+  <title>E Tax Pro Solutions Review & Win Giveaway</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <div class="container">
     <!-- Logo -->
-    <img src="assets/logo.png" alt="Your Logo" class="logo">
+    <img src="assets/logo.png" alt="E Tax Pro Solutions Logo" class="logo">
 
     <!-- Headline -->
     <header>
-      <h1>Win a Gift Card!</h1>
-      <p>3 Winners: $200, $100, $50 – Open Visa/Mastercard Prepaid Cards</p>
+      <h1 class="main-headline">E Tax Pro Solutions Review & Win Giveaway</h1>
+      <h2 class="sub-headline">Win a Gift Card! 3 Winners: $200, $100, $50 – Open Visa/Mastercard Prepaid Cards</h2>
       <p class="instruction">Submit your info first, then click a star to leave your review.</p>
     </header>
 
@@ -23,25 +23,34 @@
       <h2>Enter the Raffle</h2>
       <input type="text" id="name" placeholder="Your Name" required>
       <input type="email" id="email" placeholder="Your Email" required>
+      <input type="tel" id="phone" placeholder="Your Phone Number" required>
       <button type="submit">Submit</button>
-      <p class="privacy">Your email will only be used for the giveaway. Winners will be notified via email.</p>
+      <p class="privacy">Your info will only be used for this giveaway. Winners will be notified via email/phone.</p>
     </form>
 
     <!-- Interactive Stars -->
-    <div class="stars" id="starContainer">
-      <span data-value="1">&#9733;</span>
-      <span data-value="2">&#9733;</span>
-      <span data-value="3">&#9733;</span>
-      <span data-value="4">&#9733;</span>
-      <span data-value="5">&#9733;</span>
+    <div class="stars-container">
+      <p class="star-label">Leave your review here →</p>
+      <div class="stars" id="starContainer">
+        <span data-value="1">&#9733;</span>
+        <span data-value="2">&#9733;</span>
+        <span data-value="3">&#9733;</span>
+        <span data-value="4">&#9733;</span>
+        <span data-value="5">&#9733;</span>
+      </div>
     </div>
 
     <!-- Confirmation -->
     <div id="confirmation" class="hidden">
-      <h2>Thank you!</h2>
+      <h2>Thank You!</h2>
       <p id="userName"></p>
       <p>You are now entered into the giveaway. Click a star above to leave your Google review and complete your entry.</p>
     </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>Email us at: <a href="mailto:info@etaxpro.com">info@etaxpro.com</a> | Call: (123) 456-7890</p>
+    </footer>
   </div>
 
   <script src="js/script.js"></script>

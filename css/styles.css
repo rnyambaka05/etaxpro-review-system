@@ -10,77 +10,99 @@ body {
 
 .container {
   width: 100%;
-  max-width: 500px;
+  max-width: 700px;
   background: #fff;
-  margin: 50px 20px;
-  padding: 30px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  border-radius: 10px;
+  margin: 20px;
+  padding: 40px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  border-radius: 12px;
   text-align: center;
 }
 
+/* Logo */
 .logo {
-  max-width: 150px;
+  max-width: 200px;
+  margin-bottom: 30px;
+}
+
+/* Headlines */
+.main-headline {
+  font-size: 60px;
+  font-weight: bold;
+  color: #293759;
   margin-bottom: 20px;
 }
 
-header h1 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-header p {
-  font-size: 1rem;
-  margin-bottom: 10px;
+.sub-headline {
+  font-size: 45px;
+  font-weight: bold;
+  color: #f9bd3f;
+  margin-bottom: 20px;
 }
 
 .instruction {
+  font-size: 28px;
   font-weight: bold;
-  color: #333;
+  color: #2c3b5e;
+  margin-bottom: 40px;
+}
+
+/* Form */
+form h2 {
+  font-size: 35px;
   margin-bottom: 20px;
+  color: #293759;
+}
+
+form input {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  margin: 12px 0;
+  font-size: 24px;
+  border-radius: 8px;
+  border: 2px solid #2c3b5e;
+}
+
+form button {
+  padding: 20px;
+  font-size: 26px;
+  background: #f9bd3f;
+  color: #293759;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+form button:hover {
+  background: #cb9215;
 }
 
 /* Stars */
+.stars-container {
+  margin-top: 40px;
+}
+
+.star-label {
+  font-size: 30px;
+  font-weight: bold;
+  color: #293759;
+  margin-bottom: 10px;
+}
+
 .stars span {
-  font-size: 2.5rem;
+  font-size: 120px;
   cursor: pointer;
   color: #ccc;
-  margin: 0 5px;
-  transition: color 0.2s;
+  margin: 0 10px;
+  transition: color 0.2s, transform 0.2s;
 }
 
 .stars span.hover,
 .stars span.selected {
-  color: #FFD700; /* bright gold */
-}
-
-/* Form */
-form input {
-  display: block;
-  width: 100%;
-  padding: 12px;
-  margin: 10px 0;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-
-form button {
-  padding: 12px 20px;
-  background: #28a745;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-form button:hover {
-  background: #218838;
-}
-
-.privacy {
-  font-size: 0.8rem;
-  color: #666;
-  margin-top: 10px;
+  color: #f9bd3f;
+  transform: scale(1.2);
 }
 
 /* Hidden confirmation */
@@ -88,13 +110,36 @@ form button:hover {
   display: none;
 }
 
+#confirmation h2 {
+  font-size: 50px;
+  color: #f9bd3f;
+  margin-bottom: 20px;
+}
+
+#confirmation p {
+  font-size: 30px;
+}
+
+/* Footer */
+footer {
+  margin-top: 50px;
+  font-size: 25px;
+  font-weight: bold;
+  color: #2c3b5e;
+}
+
+footer a {
+  color: #293759;
+  text-decoration: none;
+}
+
 /* Mobile responsiveness */
 @media screen and (max-width: 480px) {
-  .stars span {
-    font-size: 2rem;
-    margin: 0 3px;
-  }
-  form input, form button {
-    padding: 10px;
-  }
+  .main-headline { font-size: 40px; }
+  .sub-headline { font-size: 30px; }
+  .instruction { font-size: 22px; }
+  form input, form button { font-size: 20px; padding: 15px; }
+  .stars span { font-size: 80px; margin: 0 5px; }
+  .star-label { font-size: 22px; }
+  footer { font-size: 18px; }
 }
