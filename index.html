@@ -33,7 +33,7 @@ body{
 .container{
   max-width:1250px;
   margin:auto;
-  padding:50px 20px;
+  padding:25px 20px 50px 20px; /* reduced top space */
   text-align:center;
 }
 
@@ -41,22 +41,19 @@ body{
 .logo img{
   width:440px;
   max-width:90%;
-  margin-bottom:18px;
+  margin-bottom:10px; /* reduced spacing */
 }
 
-/* WINNING GIFT CARD PILL */
+/* PILL */
 .win-pill{
   display:inline-block;
-  padding:10px 26px;
+  padding:8px 22px;
   border-radius:999px;
   border:2px solid var(--gold);
   color:#fff;
   font-weight:900;
-  letter-spacing:.5px;
-  margin-bottom:18px;
-  box-shadow:
-    0 0 14px rgba(226,177,60,.7),
-    0 0 32px rgba(226,177,60,.5);
+  margin-bottom:14px;
+  box-shadow:0 0 16px rgba(226,177,60,.7);
 }
 
 /* TITLE */
@@ -82,7 +79,6 @@ h1{
   padding-bottom:4px;
 }
 
-/* COUNTDOWN */
 .countdown{
   font-size:1.35rem;
   font-weight:900;
@@ -198,12 +194,20 @@ h1{
   box-shadow:0 0 30px rgba(226,177,60,.8);
 }
 
-/* FOOTER */
+/* FOOTER CENTERED */
 footer{
   margin-top:45px;
-  padding:22px;
+  padding:25px;
   background:rgba(0,0,0,.65);
   font-size:.9rem;
+  text-align:center;
+}
+
+.footer-inner{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  align-items:center;
 }
 </style>
 </head>
@@ -216,9 +220,9 @@ footer{
     <img src="./logo.png" alt="E Tax Pro Solutions Logo">
   </div>
 
-  <div class="win-pill">WINNING GIFT CARD!</div>
+  <div class="win-pill">Leave a Review & Win a Gift Card!</div>
 
-  <h1>Client Appreciation Giveaway</h1>
+  <h1>🎉 Client Appreciation Giveaway 🎉</h1>
 
   <p class="subtitle">
     To thank our valued clients,
@@ -230,21 +234,21 @@ footer{
 
   <div class="prizes">
     <div class="prize">
-      <img src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?auto=format&fit=crop&w=1400&q=80">
+      <img src="https://images.unsplash.com/photo-1621264448270-4f8f1c5f6f3c?auto=format&fit=crop&w=1400&q=80">
       <h2>🥇 First Prize</h2>
       <span>$200</span>
       <p>Prepaid Visa / MasterCard Gift Card</p>
     </div>
 
     <div class="prize">
-      <img src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?auto=format&fit=crop&w=1400&q=80">
+      <img src="https://images.unsplash.com/photo-1580519542036-c47de6196ba5?auto=format&fit=crop&w=1400&q=80">
       <h2>🥈 Second Prize</h2>
       <span>$100</span>
       <p>Prepaid Visa / MasterCard Gift Card</p>
     </div>
 
     <div class="prize">
-      <img src="https://images.unsplash.com/photo-1580519542036-c47de6196ba5?auto=format&fit=crop&w=1400&q=80">
+      <img src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?auto=format&fit=crop&w=1400&q=80">
       <h2>🥉 Third Prize</h2>
       <span>$50</span>
       <p>Prepaid Visa / MasterCard Gift Card</p>
@@ -268,16 +272,19 @@ footer{
   <a class="review-btn"
      href="https://search.google.com/local/writereview?placeid=ChIJUbsHysOjJoYRIxypZb6q0X8"
      target="_blank">
-    Leave a Google Review
+    ⭐ Leave a Google Review ⭐
   </a>
 
 </div>
 
 <footer>
-  <strong>E Tax Pro Solutions</strong><br>
-  1543 Delplaza Dr #10, Baton Rouge, LA 70815<br>
-  📞 225-247-9803 | ✉ ETaxProSolutions@gmail.com<br>
-  © 2026 E Tax Pro Solutions. All rights reserved.
+  <div class="footer-inner">
+    <div><strong>E Tax Pro Solutions</strong></div>
+    <div>1543 Delplaza Dr #10, Baton Rouge, LA 70815</div>
+    <div>📞 225-247-9803</div>
+    <div>✉ ETaxProSolutions@gmail.com</div>
+    <div>© 2026 E Tax Pro Solutions. All rights reserved.</div>
+  </div>
 </footer>
 
 <script>
