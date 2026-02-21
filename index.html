@@ -5,11 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>E Tax Pro Solutions | Leave a Review</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800;900&display=swap" rel="stylesheet">
 
 <style>
 :root{
   --navy:#0b1020;
+  --navy2:#111a33;
   --gold:#e2b13c;
   --gold2:#ffd36a;
 }
@@ -23,7 +24,7 @@
 
 body{
   min-height:100vh;
-  background:linear-gradient(135deg,#0b1020,#111a33);
+  background:linear-gradient(135deg,var(--navy),var(--navy2));
   color:#fff;
   display:flex;
   flex-direction:column;
@@ -33,106 +34,75 @@ body{
 
 /* LOGO */
 .logo{
-  margin-top:40px;
+  margin-top:45px;
 }
 .logo img{
-  width:260px;
+  width:340px; /* BIGGER LOGO */
+  max-width:90%;
 }
 
-/* MAIN CONTENT */
+/* MAIN */
 .main{
   text-align:center;
-  max-width:700px;
-  padding:20px;
+  max-width:800px;
+  padding:30px 20px;
 }
 
 .main h1{
-  font-size:2.2rem;
+  font-size:2.4rem;
   font-weight:900;
-  margin-bottom:12px;
+  margin-bottom:18px;
 }
 
-.main p{
-  font-size:1.05rem;
+.copy{
+  font-size:1.15rem;
   line-height:1.6;
   margin-bottom:30px;
 }
 
-/* BUTTON AREA */
-.button-wrapper{
-  position:relative;
-  display:inline-block;
-  margin:40px 0;
+/* PRICES */
+.prices{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  margin-bottom:40px;
 }
 
-/* GOLD BUTTON */
-.review-btn{
-  padding:22px 60px;
-  font-size:1.4rem;
+.price{
+  font-size:2.2rem;
   font-weight:900;
+  color:var(--gold2);
+  text-shadow:0 0 18px rgba(226,177,60,.6);
+}
+
+/* CTA */
+.review-btn{
+  display:inline-block;
+  padding:28px 80px; /* BIG BUTTON */
+  font-size:1.6rem;
+  font-weight:900;
+  border-radius:18px;
   background:linear-gradient(180deg,var(--gold2),var(--gold));
-  color:#000;
-  border-radius:14px;
+  color:#1b1205;
   text-decoration:none;
-  box-shadow:0 0 40px rgba(226,177,60,.6);
-  position:relative;
-  z-index:2;
+  box-shadow:0 0 50px rgba(226,177,60,.7);
+  transition:.25s;
 }
 
-/* ARROWS */
-.arrow{
-  width:0;
-  height:0;
-  border-style:solid;
-  position:absolute;
-  animation:pulse 1.8s infinite;
-}
-
-.arrow.top{
-  border-width:0 12px 18px 12px;
-  border-color:transparent transparent var(--gold) transparent;
-  top:-35px;
-  left:50%;
-  transform:translateX(-50%);
-}
-
-.arrow.bottom{
-  border-width:18px 12px 0 12px;
-  border-color:var(--gold) transparent transparent transparent;
-  bottom:-35px;
-  left:50%;
-  transform:translateX(-50%);
-}
-
-.arrow.left{
-  border-width:12px 18px 12px 0;
-  border-color:transparent var(--gold) transparent transparent;
-  left:-35px;
-  top:50%;
-  transform:translateY(-50%);
-}
-
-.arrow.right{
-  border-width:12px 0 12px 18px;
-  border-color:transparent transparent transparent var(--gold);
-  right:-35px;
-  top:50%;
-  transform:translateY(-50%);
-}
-
-@keyframes pulse{
-  0%,100%{opacity:1;}
-  50%{opacity:.5;}
+.review-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 0 65px rgba(226,177,60,.9);
 }
 
 /* FOOTER */
 footer{
   width:100%;
   text-align:center;
-  padding:22px;
+  padding:24px;
   background:rgba(0,0,0,.6);
   font-size:.9rem;
 }
+
 footer div{
   margin:6px 0;
 }
@@ -146,25 +116,24 @@ footer div{
 </div>
 
 <div class="main">
-  <h1>Leave a Google Review & Get a Gift Card</h1>
-  <p>
-    As a thank you to our valued clients, E Tax Pro Solutions is giving away
-    <strong>$200, $100, and $50 prepaid gift cards</strong>.
-    Simply leave us a Google review to be eligible.
+  <h1>Leave a Google Review & Win a Gift Card</h1>
+
+  <p class="copy">
+    As a thank you to our valued clients, <strong>E Tax Pro Solutions</strong> is giving away
+    prepaid gift cards. Leave us a Google review to be eligible.
   </p>
 
-  <div class="button-wrapper">
-    <div class="arrow top"></div>
-    <div class="arrow bottom"></div>
-    <div class="arrow left"></div>
-    <div class="arrow right"></div>
-
-    <a class="review-btn"
-       href="https://search.google.com/local/writereview?placeid=ChIJUbsHysOjJoYRIxypZb6q0X8"
-       target="_blank">
-      Leave a Google Review
-    </a>
+  <div class="prices">
+    <div class="price">$200</div>
+    <div class="price">$100</div>
+    <div class="price">$50</div>
   </div>
+
+  <a class="review-btn"
+     href="https://search.google.com/local/writereview?placeid=ChIJUbsHysOjJoYRIxypZb6q0X8"
+     target="_blank">
+     Leave a Google Review
+  </a>
 </div>
 
 <footer>
