@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>E Tax Pro Solutions | Leave a Review</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&display=swap" rel="stylesheet">
 
 <style>
 :root{
@@ -25,51 +25,46 @@
 body{
   min-height:100vh;
   background:linear-gradient(135deg,var(--navy),var(--navy2));
-  color:#fff;
   display:flex;
   flex-direction:column;
   justify-content:space-between;
   align-items:center;
+  color:#fff;
+}
+
+/* CENTER CONTENT */
+.center{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
 }
 
 /* LOGO */
-.logo{
-  margin-top:50px;
-}
 .logo img{
-  width:320px;
+  width:360px; /* Slightly Bigger */
   max-width:90%;
+  margin-bottom:40px;
 }
 
-/* MAIN */
-.main{
-  text-align:center;
-  padding:20px;
-}
-
-.main h1{
-  font-size:2.2rem;
-  font-weight:900;
-  margin-bottom:30px;
-}
-
-/* CTA BUTTON */
+/* BUTTON */
 .review-btn{
-  display:inline-block;
-  padding:30px 90px;
-  font-size:1.7rem;
+  padding:32px 110px;
+  font-size:1.8rem;
   font-weight:900;
-  border-radius:20px;
+  border-radius:22px;
   background:linear-gradient(180deg,var(--gold2),var(--gold));
   color:#1b1205;
   text-decoration:none;
-  box-shadow:0 0 60px rgba(226,177,60,.75);
+  box-shadow:0 0 70px rgba(226,177,60,.75);
   transition:.25s;
 }
 
 .review-btn:hover{
-  transform:translateY(-2px);
-  box-shadow:0 0 80px rgba(226,177,60,.95);
+  transform:translateY(-3px);
+  box-shadow:0 0 90px rgba(226,177,60,1);
 }
 
 /* FOOTER */
@@ -89,17 +84,15 @@ footer div{
 
 <body>
 
-<div class="logo">
-  <img src="./logo.png" alt="E Tax Pro Solutions Logo">
-</div>
-
-<div class="main">
-  <h1>Leave a Google Review</h1>
+<div class="center">
+  <div class="logo">
+    <img src="./logo.png" alt="E Tax Pro Solutions Logo">
+  </div>
 
   <a class="review-btn"
      href="https://search.google.com/local/writereview?placeid=ChIJUbsHysOjJoYRIxypZb6q0X8"
      target="_blank">
-    Leave a Google Review
+     Leave a Google Review
   </a>
 </div>
 
