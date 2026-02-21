@@ -5,201 +5,145 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>E Tax Pro Solutions | Client Appreciation Giveaway</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --deep-blue:#0d1b2a;
-  --royal-blue:#1b263b;
-  --electric-blue:#415a77;
+  --navy:#0b1020;
+  --navy2:#111a33;
   --gold:#e2b13c;
-  --light-gold:#f5d77a;
+  --gold2:#c99520;
   --white:#ffffff;
 }
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins', sans-serif;
-}
+*{box-sizing:border-box;margin:0;padding:0;font-family:'Poppins',sans-serif;}
 
 body{
+  height:100vh;
   background:
-    radial-gradient(circle at top left, rgba(226,177,60,0.2), transparent 40%),
-    radial-gradient(circle at bottom right, rgba(65,90,119,0.4), transparent 40%),
-    linear-gradient(135deg, var(--deep-blue), var(--royal-blue));
-  color: var(--white);
-  min-height:100vh;
+    radial-gradient(800px 400px at 20% 20%, rgba(226,177,60,.25), transparent 60%),
+    linear-gradient(135deg,var(--navy),var(--navy2)),
+    url("https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=2400&q=80");
+  background-size:cover;
+  background-position:center;
+  color:#fff;
+  overflow:hidden;
+}
+
+/* Layout */
+.page{
+  height:100%;
   display:flex;
   flex-direction:column;
   justify-content:space-between;
-  overflow-x:hidden;
-}
-
-/* Floating glow background effect */
-body::before{
-  content:'';
-  position:absolute;
-  width:400px;
-  height:400px;
-  background:rgba(226,177,60,0.15);
-  filter:blur(120px);
-  top:-100px;
-  left:-100px;
-  animation:floatGlow 8s infinite alternate;
-}
-
-@keyframes floatGlow{
-  from{transform:translateY(0);}
-  to{transform:translateY(40px);}
 }
 
 .container{
-  text-align:center;
-  padding:40px 20px;
   max-width:1200px;
   margin:auto;
-  position:relative;
-  z-index:2;
+  padding:25px;
+  text-align:center;
 }
 
 /* Logo */
 .logo img{
-  width:240px;
-  margin-bottom:20px;
-  filter:drop-shadow(0 0 15px rgba(226,177,60,0.4));
+  width:210px;
+  margin-bottom:10px;
 }
 
-/* Headline */
+/* Email pill */
+.notice-pill{
+  display:inline-block;
+  margin:10px auto 20px;
+  padding:8px 18px;
+  border-radius:999px;
+  background:rgba(226,177,60,.18);
+  border:1px solid rgba(226,177,60,.4);
+  font-weight:700;
+  font-size:.85rem;
+  box-shadow:0 0 18px rgba(226,177,60,.35);
+}
+
+/* Headings */
 h1{
   font-size:2.7rem;
-  font-weight:800;
-  background:linear-gradient(to right, var(--light-gold), var(--gold));
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  margin-bottom:15px;
+  font-weight:900;
+  margin-bottom:10px;
 }
 
 .subtitle{
-  font-size:1.1rem;
-  opacity:.9;
-  margin-bottom:30px;
+  font-size:1.05rem;
+  opacity:.95;
+  max-width:750px;
+  margin:0 auto 25px;
 }
 
-/* Prize Cards */
+/* Prize cards */
 .prizes{
   display:flex;
   justify-content:center;
   gap:25px;
-  flex-wrap:wrap;
-  margin-bottom:30px;
+  margin-bottom:25px;
 }
 
 .prize{
-  background:rgba(255,255,255,0.05);
-  backdrop-filter:blur(12px);
-  border:1px solid rgba(255,255,255,0.1);
-  padding:25px;
-  border-radius:20px;
-  width:280px;
-  transition:.4s;
-  position:relative;
-  overflow:hidden;
-}
-
-.prize img{
-  width:90px;
-  margin:15px 0;
+  width:260px;
+  padding:20px;
+  border-radius:18px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.18);
+  backdrop-filter:blur(10px);
+  box-shadow:0 20px 40px rgba(0,0,0,.35);
+  transition:.3s;
 }
 
 .prize:hover{
-  transform:translateY(-8px) scale(1.03);
+  transform:translateY(-8px);
   border-color:var(--gold);
-  box-shadow:0 0 30px rgba(226,177,60,0.5);
+  box-shadow:0 0 35px rgba(226,177,60,.55);
 }
 
-.prize h2{
+.prize img{
+  width:100%;
+  height:120px;
+  object-fit:cover;
+  border-radius:12px;
   margin-bottom:10px;
 }
 
-.prize span{
-  font-size:2.2rem;
-  font-weight:800;
-  color:var(--gold);
-}
+.prize h2{font-size:1.2rem;margin-bottom:5px;}
+.prize span{font-size:2.2rem;font-weight:900;color:var(--gold);}
 
 /* Form */
 form{
-  margin:20px 0;
+  margin-top:10px;
 }
 
 input{
-  padding:12px;
-  margin:6px;
+  width:200px;
+  padding:10px;
+  margin:5px;
+  border-radius:6px;
   border:none;
-  border-radius:8px;
-  width:220px;
-  background:rgba(255,255,255,0.1);
-  color:white;
-}
-
-input::placeholder{
-  color:#ddd;
 }
 
 .submit-btn{
-  padding:12px 25px;
-  background:var(--gold);
+  padding:10px 26px;
+  background:linear-gradient(180deg,#ffd36a,var(--gold2));
   border:none;
-  border-radius:8px;
-  font-weight:700;
-  cursor:pointer;
-  transition:.3s;
-}
-
-.submit-btn:hover{
-  background:var(--light-gold);
-  box-shadow:0 0 15px rgba(226,177,60,0.7);
-}
-
-/* Notification Pill */
-.notice-pill{
-  display:inline-block;
-  background:rgba(226,177,60,0.15);
-  border:1px solid var(--gold);
-  padding:8px 18px;
-  border-radius:50px;
-  font-size:.85rem;
-  margin:15px 0;
-}
-
-/* Review Button */
-.review-btn{
-  display:inline-block;
-  margin-top:15px;
-  padding:18px 50px;
-  font-size:1.3rem;
+  border-radius:6px;
   font-weight:800;
-  background:white;
-  color:var(--deep-blue);
-  border-radius:10px;
-  text-decoration:none;
-  transition:.3s;
-  position:relative;
+  cursor:pointer;
+  margin-top:5px;
 }
 
-.review-btn:hover{
-  background:var(--gold);
-  box-shadow:0 0 25px rgba(226,177,60,0.8);
-}
+.submit-btn:hover{opacity:.85;}
 
-.review-btn::after{
-  content:'⬇ ⬇ ⬇';
-  display:block;
-  font-size:1.6rem;
-  margin-top:10px;
+/* Review CTA */
+.arrows{
+  font-size:2.2rem;
   animation:bounce 1.5s infinite;
+  margin-top:8px;
 }
 
 @keyframes bounce{
@@ -207,78 +151,98 @@ input::placeholder{
   50%{transform:translateY(10px);}
 }
 
+.review-btn{
+  display:inline-block;
+  margin-top:10px;
+  padding:16px 46px;
+  font-size:1.25rem;
+  font-weight:900;
+  background:#fff;
+  color:var(--navy);
+  border-radius:10px;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.review-btn:hover{
+  background:var(--gold);
+}
+
 /* Footer */
 footer{
-  text-align:center;
-  font-size:.85rem;
-  padding:15px;
-  background:rgba(0,0,0,0.4);
+  background:rgba(0,0,0,.45);
+  padding:12px;
+  font-size:.8rem;
 }
 </style>
 </head>
 
 <body>
+<div class="page">
 
 <div class="container">
 
-<div class="logo">
-  <img src="logo.png" alt="E Tax Pro Solutions Logo">
-</div>
-
-<h1>Client Appreciation Giveaway 🎉</h1>
-<p class="subtitle">
-To thank our valued clients, we’re giving away three prepaid gift cards!
-Winners announced April 1, 2026.
-</p>
-
-<div class="prizes">
-
-  <div class="prize">
-    <h2>🥇 First Prize</h2>
-    <img src="https://cdn-icons-png.flaticon.com/512/2331/2331940.png">
-    <span>$200</span>
-    <p>Prepaid Visa / MasterCard</p>
+  <div class="logo">
+    <img src="./logo.png" alt="E Tax Pro Solutions Logo">
   </div>
 
-  <div class="prize">
-    <h2>🥈 Second Prize</h2>
-    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135706.png">
-    <span>$100</span>
-    <p>Prepaid Visa / MasterCard</p>
+  <div class="notice-pill">
+    Winners will ONLY be contacted via email from ETaxProSolutions@gmail.com
   </div>
 
-  <div class="prize">
-    <h2>🥉 Third Prize</h2>
-    <img src="https://cdn-icons-png.flaticon.com/512/1170/1170627.png">
-    <span>$50</span>
-    <p>Prepaid Visa / MasterCard</p>
+  <h1>Client Appreciation Giveaway 🎉</h1>
+  <p class="subtitle">
+    To thank our valued clients, E Tax Pro Solutions is giving away three prepaid Visa or MasterCard gift cards.
+    Leave a Google review and submit your info below to enter. Winners announced April 1, 2026.
+  </p>
+
+  <div class="prizes">
+    <div class="prize">
+      <img src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?auto=format&fit=crop&w=800&q=80">
+      <h2>🥇 First Prize</h2>
+      <span>$200</span>
+      <p>Prepaid Visa / MasterCard</p>
+    </div>
+
+    <div class="prize">
+      <img src="https://images.unsplash.com/photo-1621799754526-a0d52c49fad5?auto=format&fit=crop&w=800&q=80">
+      <h2>🥈 Second Prize</h2>
+      <span>$100</span>
+      <p>Prepaid Visa / MasterCard</p>
+    </div>
+
+    <div class="prize">
+      <img src="https://images.unsplash.com/photo-1580519542036-c47de6196ba5?auto=format&fit=crop&w=800&q=80">
+      <h2>🥉 Third Prize</h2>
+      <span>$50</span>
+      <p>Prepaid Visa / MasterCard</p>
+    </div>
   </div>
 
-</div>
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+    <input type="text" name="phone" placeholder="Phone Number" required><br>
+    <button class="submit-btn" type="submit">Submit Entry</button>
+  </form>
 
-<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-  <input type="text" name="name" placeholder="Full Name" required>
-  <input type="email" name="email" placeholder="Email Address" required>
-  <input type="text" name="phone" placeholder="Phone Number" required>
-  <br>
-  <button class="submit-btn" type="submit">Submit Entry</button>
-</form>
+  <div class="arrows">⬇️ ⬇️ ⬇️</div>
 
-<div class="notice-pill">
-Winners will ONLY be contacted via ETaxProSolutions@gmail.com
-</div>
-
-<a href="https://search.google.com/local/writereview?placeid=ChIJUbsHysOjJoYRIxypZb6q0X8" target="_blank" class="review-btn">
-Leave a Google Review ⭐
-</a>
+  <a class="review-btn"
+     href="https://search.google.com/local/writereview?placeid=ChIJUbsHysOjJoYRIxypZb6q0X8"
+     target="_blank">
+    Leave a Google Review
+  </a>
 
 </div>
 
 <footer>
-E Tax Pro Solutions | Baton Rouge, LA <br>
-📞 225-247-9803 | ✉ ETaxProSolutions@gmail.com <br>
-© 2026 E Tax Pro Solutions. All Rights Reserved.
+  <strong>E Tax Pro Solutions</strong><br>
+  1543 Delplaza Dr #10, Baton Rouge, LA 70815<br>
+  📞 225-247-9803 | ✉ ETaxProSolutions@gmail.com<br>
+  © 2026 E Tax Pro Solutions. All rights reserved.
 </footer>
 
+</div>
 </body>
 </html>
