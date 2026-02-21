@@ -3,304 +3,176 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>E Tax Pro Solutions | Client Appreciation Giveaway</title>
+<title>E Tax Pro Solutions | Leave a Review</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;900&display=swap" rel="stylesheet">
 
 <style>
 :root{
   --navy:#0b1020;
-  --navy2:#111a33;
   --gold:#e2b13c;
-  --gold2:#c99520;
-  --gold3:#ffd36a;
+  --gold2:#ffd36a;
 }
 
-*{box-sizing:border-box;margin:0;padding:0;font-family:'Poppins',sans-serif;}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:'Poppins',sans-serif;
+}
 
 body{
-  background:
-    radial-gradient(900px 500px at 15% 20%, rgba(226,177,60,.28), transparent 60%),
-    radial-gradient(900px 500px at 85% 30%, rgba(226,177,60,.22), transparent 60%),
-    linear-gradient(135deg,var(--navy),var(--navy2)),
-    url("https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=2400&q=80");
-  background-size:cover;
-  background-position:center;
+  min-height:100vh;
+  background:linear-gradient(135deg,#0b1020,#111a33);
   color:#fff;
-  overflow-x:hidden;
-}
-
-.container{
-  max-width:1250px;
-  margin:auto;
-  padding:25px 20px 50px 20px; /* reduced top space */
-  text-align:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  align-items:center;
 }
 
 /* LOGO */
+.logo{
+  margin-top:40px;
+}
 .logo img{
-  width:440px;
-  max-width:90%;
-  margin-bottom:10px; /* reduced spacing */
+  width:260px;
 }
 
-/* PILL */
-.win-pill{
-  display:inline-block;
-  padding:8px 22px;
-  border-radius:999px;
-  border:2px solid var(--gold);
-  color:#fff;
-  font-weight:900;
-  margin-bottom:14px;
-  box-shadow:0 0 16px rgba(226,177,60,.7);
+/* MAIN CONTENT */
+.main{
+  text-align:center;
+  max-width:700px;
+  padding:20px;
 }
 
-/* TITLE */
-h1{
-  font-family:'Playfair Display',serif;
-  font-size:3.3rem;
+.main h1{
+  font-size:2.2rem;
   font-weight:900;
-  background:linear-gradient(180deg,var(--gold3),var(--gold));
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
   margin-bottom:12px;
 }
 
-.subtitle{
-  max-width:900px;
-  margin:15px auto 28px;
-  font-size:1.1rem;
+.main p{
+  font-size:1.05rem;
   line-height:1.6;
-}
-
-.highlight{
-  border-bottom:3px solid var(--gold);
-  padding-bottom:4px;
-}
-
-.countdown{
-  font-size:1.35rem;
-  font-weight:900;
   margin-bottom:30px;
-  color:var(--gold3);
 }
 
-/* PRIZES */
-.prizes{
-  display:flex;
-  justify-content:center;
-  gap:35px;
-  flex-wrap:wrap;
-  margin-bottom:40px;
-}
-
-.prize{
-  width:320px;
-  background:rgba(255,255,255,.09);
-  border-radius:20px;
-  padding:26px;
-  backdrop-filter:blur(14px);
-  border:1px solid rgba(255,255,255,.22);
-  transition:.4s;
-}
-
-.prize:hover{
-  transform:translateY(-12px);
-  box-shadow:0 0 45px rgba(226,177,60,.65);
-}
-
-.prize img{
-  width:100%;
-  height:170px;
-  object-fit:cover;
-  border-radius:14px;
-  margin-bottom:15px;
-}
-
-.prize h2{font-size:1.35rem;}
-.prize span{
-  font-size:2.5rem;
-  font-weight:900;
-  color:var(--gold);
-}
-.prize p{font-weight:700;}
-
-/* FORM */
-.form-box{
-  max-width:520px;
-  margin:0 auto 34px;
-  background:rgba(0,0,0,.55);
-  padding:32px;
-  border-radius:22px;
-  border:1px solid rgba(255,255,255,.18);
-}
-
-.form-box input{
-  width:100%;
-  padding:15px;
-  margin-bottom:16px;
-  border:none;
-  border-radius:9px;
-  font-size:1rem;
-}
-
-.submit-btn{
-  width:100%;
-  padding:15px;
-  font-weight:900;
-  font-size:1.1rem;
-  border:none;
-  border-radius:9px;
-  cursor:pointer;
-  background:linear-gradient(180deg,var(--gold3),var(--gold2));
-}
-
-.submit-btn:hover{
-  box-shadow:0 0 25px rgba(226,177,60,.7);
-}
-
-.review-note{
-  font-size:.9rem;
-  opacity:.85;
-  margin-top:10px;
-}
-
-/* REVIEW CTA */
-.arrows{
-  font-size:2.6rem;
-  animation:bounce 1.5s infinite;
-}
-
-@keyframes bounce{
-  0%,100%{transform:translateY(0);}
-  50%{transform:translateY(12px);}
-}
-
-.review-btn{
+/* BUTTON AREA */
+.button-wrapper{
+  position:relative;
   display:inline-block;
-  margin-top:18px;
-  padding:18px 60px;
-  font-size:1.35rem;
+  margin:40px 0;
+}
+
+/* GOLD BUTTON */
+.review-btn{
+  padding:22px 60px;
+  font-size:1.4rem;
   font-weight:900;
+  background:linear-gradient(180deg,var(--gold2),var(--gold));
+  color:#000;
   border-radius:14px;
-  background:linear-gradient(180deg,var(--gold3),var(--gold));
-  color:#1b1205;
   text-decoration:none;
-  transition:.3s;
+  box-shadow:0 0 40px rgba(226,177,60,.6);
+  position:relative;
+  z-index:2;
 }
 
-.review-btn:hover{
-  box-shadow:0 0 30px rgba(226,177,60,.8);
+/* ARROWS */
+.arrow{
+  width:0;
+  height:0;
+  border-style:solid;
+  position:absolute;
+  animation:pulse 1.8s infinite;
 }
 
-/* FOOTER CENTERED */
+.arrow.top{
+  border-width:0 12px 18px 12px;
+  border-color:transparent transparent var(--gold) transparent;
+  top:-35px;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+.arrow.bottom{
+  border-width:18px 12px 0 12px;
+  border-color:var(--gold) transparent transparent transparent;
+  bottom:-35px;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+.arrow.left{
+  border-width:12px 18px 12px 0;
+  border-color:transparent var(--gold) transparent transparent;
+  left:-35px;
+  top:50%;
+  transform:translateY(-50%);
+}
+
+.arrow.right{
+  border-width:12px 0 12px 18px;
+  border-color:transparent transparent transparent var(--gold);
+  right:-35px;
+  top:50%;
+  transform:translateY(-50%);
+}
+
+@keyframes pulse{
+  0%,100%{opacity:1;}
+  50%{opacity:.5;}
+}
+
+/* FOOTER */
 footer{
-  margin-top:45px;
-  padding:25px;
-  background:rgba(0,0,0,.65);
-  font-size:.9rem;
+  width:100%;
   text-align:center;
+  padding:22px;
+  background:rgba(0,0,0,.6);
+  font-size:.9rem;
 }
-
-.footer-inner{
-  display:flex;
-  flex-direction:column;
-  gap:8px;
-  align-items:center;
+footer div{
+  margin:6px 0;
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="logo">
+  <img src="./logo.png" alt="E Tax Pro Solutions Logo">
+</div>
 
-  <div class="logo">
-    <img src="./logo.png" alt="E Tax Pro Solutions Logo">
-  </div>
-
-  <div class="win-pill">Leave a Review & Win a Gift Card!</div>
-
-  <h1>🎉 Client Appreciation Giveaway 🎉</h1>
-
-  <p class="subtitle">
-    To thank our valued clients,
-    <span class="highlight">E Tax Pro Solutions is giving away Prepaid Visa & MasterCard Gift Cards</span>.
-    Leave a Google review and submit your information below to enter.
+<div class="main">
+  <h1>Leave a Google Review & Get a Gift Card</h1>
+  <p>
+    As a thank you to our valued clients, E Tax Pro Solutions is giving away
+    <strong>$200, $100, and $50 prepaid gift cards</strong>.
+    Simply leave us a Google review to be eligible.
   </p>
 
-  <div class="countdown" id="countdown"></div>
+  <div class="button-wrapper">
+    <div class="arrow top"></div>
+    <div class="arrow bottom"></div>
+    <div class="arrow left"></div>
+    <div class="arrow right"></div>
 
-  <div class="prizes">
-    <div class="prize">
-      <img src="https://images.unsplash.com/photo-1621264448270-4f8f1c5f6f3c?auto=format&fit=crop&w=1400&q=80">
-      <h2>🥇 First Prize</h2>
-      <span>$200</span>
-      <p>Prepaid Visa / MasterCard Gift Card</p>
-    </div>
-
-    <div class="prize">
-      <img src="https://images.unsplash.com/photo-1580519542036-c47de6196ba5?auto=format&fit=crop&w=1400&q=80">
-      <h2>🥈 Second Prize</h2>
-      <span>$100</span>
-      <p>Prepaid Visa / MasterCard Gift Card</p>
-    </div>
-
-    <div class="prize">
-      <img src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?auto=format&fit=crop&w=1400&q=80">
-      <h2>🥉 Third Prize</h2>
-      <span>$50</span>
-      <p>Prepaid Visa / MasterCard Gift Card</p>
-    </div>
+    <a class="review-btn"
+       href="https://search.google.com/local/writereview?placeid=ChIJUbsHysOjJoYRIxypZb6q0X8"
+       target="_blank">
+      Leave a Google Review
+    </a>
   </div>
-
-  <div class="form-box">
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <input type="text" name="name" placeholder="Full Name" required>
-      <input type="email" name="email" placeholder="Email Address" required>
-      <input type="text" name="phone" placeholder="Phone Number" required>
-      <button class="submit-btn" type="submit">Submit Entry</button>
-    </form>
-    <div class="review-note">
-      * Your name must match your Google review to qualify.
-    </div>
-  </div>
-
-  <div class="arrows">⬇️ ⬇️ ⬇️</div>
-
-  <a class="review-btn"
-     href="https://search.google.com/local/writereview?placeid=ChIJUbsHysOjJoYRIxypZb6q0X8"
-     target="_blank">
-    ⭐ Leave a Google Review ⭐
-  </a>
-
 </div>
 
 <footer>
-  <div class="footer-inner">
-    <div><strong>E Tax Pro Solutions</strong></div>
-    <div>1543 Delplaza Dr #10, Baton Rouge, LA 70815</div>
-    <div>📞 225-247-9803</div>
-    <div>✉ ETaxProSolutions@gmail.com</div>
-    <div>© 2026 E Tax Pro Solutions. All rights reserved.</div>
-  </div>
+  <div><strong>E Tax Pro Solutions</strong></div>
+  <div>1543 Delplaza Dr #10, Baton Rouge, LA 70815</div>
+  <div>📞 225-247-9803 | ✉ ETaxProSolutions@gmail.com</div>
+  <div>© 2026 E Tax Pro Solutions. All rights reserved.</div>
 </footer>
-
-<script>
-const targetDate = new Date("April 1, 2026 00:00:00").getTime();
-const countdown = document.getElementById("countdown");
-
-setInterval(() => {
-  const now = new Date().getTime();
-  const distance = targetDate - now;
-  const d = Math.floor(distance / (1000*60*60*24));
-  const h = Math.floor((distance % (1000*60*60*24))/(1000*60*60));
-  const m = Math.floor((distance % (1000*60*60))/60000);
-  const s = Math.floor((distance % 60000)/1000);
-  countdown.textContent = `Winners Announced In: ${d}d ${h}h ${m}m ${s}s`;
-},1000);
-</script>
 
 </body>
 </html>
