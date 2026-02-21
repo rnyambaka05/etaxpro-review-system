@@ -44,7 +44,7 @@ body{
 
 /* LOGO */
 .logo img{
-  width:360px; /* Slightly Bigger */
+  width:360px;
   max-width:90%;
   margin-bottom:40px;
 }
@@ -71,13 +71,34 @@ body{
 footer{
   width:100%;
   text-align:center;
-  padding:22px;
+  padding:28px 20px;
   background:rgba(0,0,0,.6);
   font-size:.9rem;
 }
 
-footer div{
-  margin:6px 0;
+.footer-inner{
+  display:flex;
+  flex-direction:column;
+  gap:10px; /* spacing between lines */
+  align-items:center;
+}
+
+footer a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:700;
+}
+
+footer a:hover{
+  color:var(--gold);
+}
+
+.disclaimer{
+  margin-top:14px;
+  font-size:.78rem;
+  opacity:.7;
+  max-width:900px;
+  line-height:1.5;
 }
 </style>
 </head>
@@ -97,10 +118,31 @@ footer div{
 </div>
 
 <footer>
-  <div><strong>E Tax Pro Solutions</strong></div>
-  <div>1543 Delplaza Dr #10, Baton Rouge, LA 70815</div>
-  <div>📞 225-247-9803 | ✉ ETaxProSolutions@gmail.com</div>
-  <div>© 2026 E Tax Pro Solutions. All rights reserved.</div>
+  <div class="footer-inner">
+    <div><strong>E Tax Pro Solutions</strong></div>
+    <div>1543 Delplaza Dr #10, Baton Rouge, LA 70815</div>
+
+    <div>
+      📞 <a href="tel:+12252479803">225-247-9803</a>
+      &nbsp;|&nbsp;
+      ✉ <a href="mailto:etaxprosolutions@gmail.com">etaxprosolutions@gmail.com</a>
+    </div>
+
+    <div>
+      🌐 <a href="https://etaxprosolutions.com" target="_blank">etaxprosolutions.com</a>
+    </div>
+
+    <div class="disclaimer">
+      Participation in the client appreciation giveaway is voluntary.
+      No purchase is required to enter or win. Leaving a Google review does
+      not guarantee a prize, and reviews may be positive or negative.
+      Winners are selected at random and will be contacted directly by
+      E Tax Pro Solutions. This promotion is not affiliated with or endorsed
+      by Google.
+    </div>
+
+    <div>© 2026 E Tax Pro Solutions. All rights reserved.</div>
+  </div>
 </footer>
 
 </body>
