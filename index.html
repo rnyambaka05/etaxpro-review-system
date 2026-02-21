@@ -5,315 +5,221 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>E Tax Pro Solutions | Client Appreciation Giveaway</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --navy:#0E1A2B;
-  --charcoal:#1F2937;
-  --gold:#C8A24D;
-  --gold-light:#e0c27a;
-  --white:#F8F6F1;
+  --navy:#0b1020;
+  --gold:#e2b13c;
+  --white:#ffffff;
 }
 
-*{margin:0;padding:0;box-sizing:border-box}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
 
 body{
-  font-family:'Inter',sans-serif;
-  background:
-    linear-gradient(rgba(14,26,43,.96),rgba(14,26,43,.96)),
-    url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=1600&auto=format&fit=crop');
-  background-size:cover;
-  background-position:center;
-  color:var(--white);
+  background: linear-gradient(135deg, #0b1020, #111a33);
+  color: var(--white);
+  height:100vh;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
 }
 
-.wrapper{
+/* Layout */
+.container{
+  text-align:center;
+  padding:20px;
   max-width:1200px;
   margin:auto;
-  padding:50px 20px;
-  text-align:center;
 }
 
-/* HERO */
-.hero img{
-  height:130px;
-  margin-bottom:25px;
-}
-
-.hero h1{
-  font-family:'Playfair Display',serif;
-  font-size:3rem;
-  color:var(--gold);
+/* Logo */
+.logo img{
+  width:220px;
   margin-bottom:15px;
 }
 
-.divider{
-  width:120px;
-  height:2px;
-  background:var(--gold);
-  margin:20px auto;
-}
-
-.hero p{
-  max-width:750px;
-  margin:0 auto 20px auto;
-  line-height:1.6;
-  color:#dcdcdc;
-}
-
-.date-badge{
-  display:inline-block;
-  padding:10px 25px;
-  border:1px solid var(--gold);
-  border-radius:40px;
-  font-weight:600;
-  background:rgba(200,162,77,.08);
-  margin-bottom:40px;
-}
-
-/* AWARDS */
-.section-title{
-  font-family:'Playfair Display',serif;
-  font-size:1.9rem;
-  color:var(--gold);
-  margin-bottom:25px;
-}
-
-.prizes{
-  display:flex;
-  justify-content:center;
-  gap:30px;
-  flex-wrap:wrap;
-  margin-bottom:50px;
-}
-
-.card{
-  background:var(--charcoal);
-  padding:35px 30px;
-  width:260px;
-  border-radius:12px;
-  border:1px solid var(--gold);
-  box-shadow:0 15px 35px rgba(0,0,0,.6);
-}
-
-.card h2{
-  font-family:'Playfair Display',serif;
-  font-size:2rem;
-  color:var(--gold);
+/* Headline */
+h1{
+  font-size:2.5rem;
+  font-weight:800;
   margin-bottom:10px;
 }
 
-.card p{
-  color:#d4d4d4;
-  font-size:.95rem;
+.subtitle{
+  font-size:1rem;
+  opacity:.9;
+  margin-bottom:25px;
 }
 
-/* FORM */
-.form-section{
-  margin-bottom:50px;
-}
-
-form{
+/* Prize Cards */
+.prizes{
   display:flex;
   justify-content:center;
-  gap:15px;
-  flex-wrap:wrap;
-  margin-top:20px;
+  gap:20px;
+  margin-bottom:25px;
+}
+
+.prize{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.1);
+  padding:20px;
+  border-radius:15px;
+  width:250px;
+  transition:.3s;
+}
+
+.prize:hover{
+  transform:translateY(-5px);
+  border-color:var(--gold);
+  box-shadow:0 0 20px rgba(226,177,60,0.4);
+}
+
+.prize h2{
+  font-size:1.3rem;
+  margin-bottom:10px;
+}
+
+.prize span{
+  font-size:2rem;
+  font-weight:800;
+  color:var(--gold);
+}
+
+/* Form */
+form{
+  margin-top:15px;
 }
 
 input{
-  padding:15px;
-  width:240px;
-  border-radius:6px;
-  border:1px solid #444;
-  background:#111;
-  color:white;
-}
-
-input:focus{
-  outline:none;
-  border-color:var(--gold);
+  padding:10px;
+  margin:5px;
+  border:none;
+  border-radius:5px;
+  width:200px;
 }
 
 .submit-btn{
-  padding:15px 35px;
-  border:none;
-  border-radius:6px;
+  padding:10px 20px;
   background:var(--gold);
-  color:#000;
-  font-weight:600;
-  cursor:pointer;
-}
-
-.submit-btn:hover{
-  background:var(--gold-light);
-}
-
-.secure-note{
-  margin-top:15px;
-  font-size:.85rem;
-  color:#bbb;
-}
-
-#entryMessage{
-  margin-top:10px;
-  color:var(--gold);
-  font-weight:600;
-}
-
-/* REVIEW */
-.review{
-  margin-bottom:50px;
-}
-
-.review-btn{
-  margin-top:20px;
-  padding:15px 40px;
-  border:1px solid var(--gold);
-  background:transparent;
-  color:var(--gold);
-  border-radius:40px;
+  border:none;
+  border-radius:5px;
   font-weight:600;
   cursor:pointer;
   transition:.3s;
 }
 
+.submit-btn:hover{
+  opacity:.8;
+}
+
+/* Arrows */
+.arrows{
+  font-size:2rem;
+  margin-top:10px;
+  animation:bounce 1.5s infinite;
+}
+
+@keyframes bounce{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(10px);}
+}
+
+/* Review Button */
+.review-btn{
+  display:inline-block;
+  margin-top:10px;
+  padding:15px 40px;
+  font-size:1.2rem;
+  font-weight:700;
+  background:white;
+  color:var(--navy);
+  border-radius:8px;
+  text-decoration:none;
+  transition:.3s;
+}
+
 .review-btn:hover{
   background:var(--gold);
-  color:#000;
+  color:var(--navy);
 }
 
-/* TRUST STRIP */
-.trust{
-  display:flex;
-  justify-content:center;
-  gap:40px;
-  flex-wrap:wrap;
-  margin:40px 0;
-  font-weight:500;
-}
-
-.trust div{
-  border-left:2px solid var(--gold);
-  padding-left:15px;
-}
-
-/* FOOTER */
+/* Footer */
 footer{
-  border-top:1px solid #333;
-  padding-top:25px;
-  font-size:.85rem;
-  color:#aaa;
+  text-align:center;
+  font-size:.8rem;
+  padding:10px;
+  background:rgba(0,0,0,0.4);
 }
 
-.contact{
-  margin-bottom:15px;
-}
-
-.disclaimer{
-  font-size:.75rem;
-  margin-top:15px;
-  color:#888;
-  line-height:1.4;
+footer a{
+  color:var(--gold);
+  text-decoration:none;
 }
 </style>
 </head>
 
 <body>
 
-<div class="wrapper">
+<div class="container">
 
-<div class="hero">
-<img src="logo.png" alt="E Tax Pro Solutions Logo">
-<h1>Client Appreciation Giveaway</h1>
-<div class="divider"></div>
-<p>
-As a valued client of E Tax Pro Solutions, we are hosting a private appreciation drawing. 
-Submit your information and leave a Google review to be entered. 
-Three winners will be selected at random and notified by email.
-</p>
-<div class="date-badge">Winners Selected April 1, 2026</div>
+<div class="logo">
+  <img src="./assets/logo.png" alt="E Tax Pro Solutions Logo">
 </div>
 
-<h2 class="section-title">Three Distinguished Awards</h2>
+<h1>Client Appreciation Giveaway 🎉</h1>
+<p class="subtitle">
+To thank our valued clients, E Tax Pro Solutions is giving away 3 prepaid gift cards!
+Winners will be announced April 1, 2026.
+</p>
 
 <div class="prizes">
-<div class="card">
-<h2>$200 Award</h2>
-<p>Prepaid Visa or Mastercard</p>
+  <div class="prize">
+    <h2>🥇 First Prize</h2>
+    <span>$200</span>
+    <p>Prepaid Visa/MasterCard</p>
+  </div>
+  <div class="prize">
+    <h2>🥈 Second Prize</h2>
+    <span>$100</span>
+    <p>Prepaid Visa/MasterCard</p>
+  </div>
+  <div class="prize">
+    <h2>🥉 Third Prize</h2>
+    <span>$50</span>
+    <p>Prepaid Visa/MasterCard</p>
+  </div>
 </div>
 
-<div class="card">
-<h2>$100 Award</h2>
-<p>Prepaid Visa or Mastercard</p>
-</div>
-
-<div class="card">
-<h2>$50 Award</h2>
-<p>Prepaid Visa or Mastercard</p>
-</div>
-</div>
-
-<div class="form-section">
-<h2 class="section-title">Secure Entry Confirmation</h2>
-
-<form id="entryForm">
-<input type="text" placeholder="Full Name" required>
-<input type="email" placeholder="Email Address" required>
-<input type="tel" placeholder="Phone Number" required>
-<button type="submit" class="submit-btn">Confirm My Entry</button>
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+  <input type="text" name="name" placeholder="Full Name" required>
+  <input type="email" name="email" placeholder="Email Address" required>
+  <input type="text" name="phone" placeholder="Phone Number" required>
+  <br>
+  <button class="submit-btn" type="submit">Submit Entry</button>
 </form>
 
-<div class="secure-note">🔒 Your information is used solely for this drawing and will not be shared.</div>
-<div id="entryMessage"></div>
-</div>
+<div class="arrows">⬇️ ⬇️ ⬇️</div>
 
-<div class="review">
-<h2 class="section-title">Leave Your Google Review</h2>
-<button class="review-btn" onclick="leaveReview()">Leave a Review on Google</button>
-</div>
+<a href="YOUR_GOOGLE_REVIEW_LINK_HERE" target="_blank" class="review-btn">
+  Leave a Google Review
+</a>
 
-<div class="trust">
-<div>Licensed & Insured</div>
-<div>5-Star Rated on Google</div>
-<div>Serving Our Community Since 2015</div>
 </div>
 
 <footer>
-<div class="contact">
-<strong>E Tax Pro Solutions</strong><br>
-Email: etaxprosolutions@gmail.com<br>
-Phone: 225-247-9803
-</div>
-
+E Tax Pro Solutions | Baton Rouge, LA <br>
+📞 225-247-9803 | ✉ ETaxProSolutions@gmail.com <br>
+Winners will ONLY be contacted via email from ETaxProSolutions@gmail.com.
+Any other contact is not affiliated with us. <br>
 © 2026 E Tax Pro Solutions. All Rights Reserved.
-
-<div class="disclaimer">
-Participation is not contingent upon the content or rating of the review. 
-Winners are selected at random on April 1, 2026. No purchase necessary.
-</div>
 </footer>
-
-</div>
-
-<script>
-let entered = false;
-
-document.getElementById('entryForm').addEventListener('submit', function(e){
-e.preventDefault();
-entered = true;
-document.getElementById('entryMessage').innerText = "Your entry has been successfully confirmed.";
-});
-
-function leaveReview(){
-if(!entered){
-alert("Please confirm your entry before leaving a review.");
-return;
-}
-window.location.href="https://search.google.com/local/writereview?placeid=ChIJUbsHysOjJoYRIxypZb6q0X8";
-}
-</script>
 
 </body>
 </html>
